@@ -16,13 +16,12 @@ export default function AnimatedCard({ children, className = '', delay = 0 }: An
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-100px' }}
-      transition={{ type: 'spring', stiffness: 300, damping: 30, delay }}
+      transition={{ type: 'spring', stiffness: 300, damping: 20, delay }}
       whileHover={{
         y: -8,
         scale: 1.02,
         boxShadow: '0 20px 40px rgba(74, 222, 128, 0.15)',
       }}
-      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
       {children}
     </motion.div>
