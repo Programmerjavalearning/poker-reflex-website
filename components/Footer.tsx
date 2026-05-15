@@ -46,9 +46,6 @@ export default function Footer() {
               </svg>
             </a>
           </div>
-          <p className="text-textSecondary text-sm">
-            © {new Date().getFullYear()} Chuplein. All rights reserved.
-          </p>
         </div>
 
         {/* Center - Quick Links */}
@@ -110,6 +107,9 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+      <p className="text-textSecondary text-sm text-center md:text-left max-w-6xl mx-auto mt-8 px-4">
+        © {new Date().getFullYear()} Chuplein. All rights reserved.
+      </p>
     </footer>
   )
 }

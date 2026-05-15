@@ -129,8 +129,8 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
           >
             <span className="text-base md:text-lg">500+ downloads in under a month</span>
-            <span className="text-gray-500">•</span>
-            <span className="text-base md:text-lg">Rated 5.0</span>
+            <span className="hidden sm:inline text-gray-500">•</span>
+            <span className="w-full sm:w-auto text-base md:text-lg">Rated 5.0</span>
             <div className="flex items-center gap-0.5 stars-shimmer">
               <span className="text-xl">⭐</span>
               <span className="text-xl">⭐</span>
