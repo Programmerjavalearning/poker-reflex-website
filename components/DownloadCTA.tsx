@@ -6,7 +6,7 @@ const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.alexis
 
 export default function DownloadCTA() {
   return (
-    <section id="download" className="relative py-16 md:py-20 px-4">
+    <section id="download" className="relative py-12 md:py-20 px-4">
       <div className="max-w-3xl mx-auto">
         <motion.div
           className="relative bg-surface rounded-2xl border border-border p-6 sm:p-10 md:p-16 text-center glow-green overflow-hidden"
@@ -23,7 +23,7 @@ export default function DownloadCTA() {
             <span className="text-gradient">Preflop Today</span>
           </h2>
           <p className="relative text-gray-200 text-lg mb-10 max-w-lg mx-auto">
-            Join players building GTO reflexes with Poker Reflex. Free to download — start in 30 seconds.
+            Join players building GTO reflexes with Poker Reflex. Free to download, start in 30 seconds.
           </p>
 
           <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-6">

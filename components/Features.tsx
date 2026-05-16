@@ -39,7 +39,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="relative py-16 md:py-20 px-4">
+    <section id="features" className="relative pt-16 pb-8 md:py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.h2
           className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16"
