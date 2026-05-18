@@ -5,14 +5,33 @@ import { useState } from 'react'
 
 export default function EmailCapture() {
   const [email, setEmail] = useState('')
-  const [submitted, setSubmitted] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email) return
-    console.log('Email submitted:', email)
-    setSubmitted(true)
-    setEmail('')
+    if (!email || !email.includes('@')) return
+
+    setStatus('loading')
+
+    try {
+      const response = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      })
+
+      if (response.ok) {
+        setStatus('success')
+        setEmail('')
+        setTimeout(() => setStatus('idle'), 4000)
+      } else {
+        setStatus('error')
+        setTimeout(() => setStatus('idle'), 4000)
+      }
+    } catch {
+      setStatus('error')
+      setTimeout(() => setStatus('idle'), 4000)
+    }
   }
 
   return (
@@ -30,7 +49,7 @@ export default function EmailCapture() {
           viewport={{ once: true, margin: '-100px' }}
           transition={{ type: 'spring', stiffness: 300, damping: 30 }}
         >
-          {submitted ? (
+          {status === 'success' ? (
             <div className="text-center">
               <p className="text-green text-3xl font-bold mb-2">You&apos;re in!</p>
               <p className="text-textSecondary text-lg">We&apos;ll keep you updated on new features.</p>
@@ -65,7 +84,8 @@ export default function EmailCapture() {
                   placeholder="your@email.com"
                   required
                   autoComplete="email"
-                  className="flex-1 px-6 py-4 rounded-xl text-text text-lg placeholder-textSecondary outline-none transition-all duration-200"
+                  disabled={status === 'loading'}
+                  className="flex-1 px-6 py-4 rounded-xl text-text text-lg placeholder-textSecondary outline-none transition-all duration-200 disabled:opacity-50"
                   style={{
                     background: '#0d1117',
                     border: '1px solid #30363d',
@@ -81,11 +101,18 @@ export default function EmailCapture() {
                 />
                 <button
                   type="submit"
-                  className="px-8 py-4 bg-green text-background text-lg font-semibold rounded-xl hover:scale-105 hover:brightness-110 transition-all duration-200 whitespace-nowrap"
+                  disabled={status === 'loading' || !email}
+                  className="px-8 py-4 bg-green text-background text-lg font-semibold rounded-xl hover:scale-105 hover:brightness-110 transition-all duration-200 whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed disabled:scale-100"
                 >
-                  Notify Me
+                  {status === 'loading' ? 'Sending...' : 'Notify Me'}
                 </button>
               </form>
+
+              {status === 'error' && (
+                <p className="text-red-400 text-sm text-center mt-3">
+                  Something went wrong. Please try again.
+                </p>
+              )}
 
               <p className="text-textSecondary text-xs text-center mt-4">
                 We respect your privacy. Unsubscribe anytime.

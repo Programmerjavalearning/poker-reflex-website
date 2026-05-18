@@ -18,6 +18,11 @@ export const metadata: Metadata = {
   title: 'Poker Reflex: GTO Preflop Trainer App | Master Poker Strategy',
   description: 'Train open, 3-bet, 4-bet, and all-in decisions with our swipe-based GTO poker trainer. Build unshakeable preflop reflexes through fast repetition and clear feedback.',
   keywords: 'poker training, GTO poker, preflop trainer, poker ranges, poker app, poker reflex, poker strategy, 3-bet trainer, 4-bet trainer',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: 'Poker Reflex: GTO Preflop Trainer',
     description: 'Master open, 3-bet, 4-bet, and all-in decisions. Join players building GTO reflexes with our swipe-based trainer.',
