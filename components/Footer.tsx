@@ -83,32 +83,25 @@ export default function Footer() {
           <ul className="space-y-2">
             <li>
               <a
-                href="https://range-master.alexischup.workers.dev/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/privacy-policy"
                 className="text-textSecondary hover:text-text text-sm transition-colors"
               >
                 Privacy Policy
               </a>
             </li>
             <li>
-              <a href="#" className="text-textSecondary hover:text-text text-sm transition-colors">
-                Terms of Service
-              </a>
-            </li>
-            <li>
               <a
-                href="mailto:devale.info@gmail.com"
+                href="mailto:contact@poker-reflex.com"
                 className="text-textSecondary hover:text-text text-sm transition-colors"
               >
-                devale.info@gmail.com
+                contact@poker-reflex.com
               </a>
             </li>
           </ul>
         </div>
       </div>
       <p className="text-textSecondary text-sm text-center md:text-left max-w-6xl mx-auto mt-8 px-4">
-        © {new Date().getFullYear()} Chuplein. All rights reserved.
+        © {new Date().getFullYear()} Poker Reflex. All rights reserved.
       </p>
     </footer>
   )

@@ -14,10 +14,13 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://pokerreflex.com'),
+  metadataBase: new URL('https://poker-reflex.com'),
   title: 'Poker Reflex: GTO Preflop Trainer App | Master Poker Strategy',
   description: 'Train open, 3-bet, 4-bet, and all-in decisions with our swipe-based GTO poker trainer. Build unshakeable preflop reflexes through fast repetition and clear feedback.',
   keywords: 'poker training, GTO poker, preflop trainer, poker ranges, poker app, poker reflex, poker strategy, 3-bet trainer, 4-bet trainer',
+  alternates: {
+    canonical: 'https://poker-reflex.com',
+  },
   icons: {
     icon: '/logo.png',
     shortcut: '/logo.png',
@@ -27,7 +30,7 @@ export const metadata: Metadata = {
     title: 'Poker Reflex: GTO Preflop Trainer',
     description: 'Master open, 3-bet, 4-bet, and all-in decisions. Join players building GTO reflexes with our swipe-based trainer.',
     images: ['https://play-lh.googleusercontent.com/AU6n_bA3kDocqmgkFSHMYVA4ZI3T4QNgjEjzkZo7y9jMZ2ujJ8lSpsuDHIfXPB0X5l8IGGz3qRqNHiXV2JgXUA=w240-h480'],
-    url: 'https://pokerreflex.com',
+    url: 'https://poker-reflex.com',
     type: 'website',
   },
   twitter: {
@@ -64,7 +67,7 @@ export default function RootLayout({
             applicationCategory: 'GameApplication',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
             aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', ratingCount: '80' },
-            url: 'https://pokerreflex.com',
+            url: 'https://poker-reflex.com',
             installUrl: 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex',
           })}
         </Script>

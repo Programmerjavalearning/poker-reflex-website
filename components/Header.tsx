@@ -101,6 +101,12 @@ export default function Header() {
           >
             Features
           </a>
+          <Link
+            href="/blog"
+            className="hidden sm:block text-textSecondary hover:text-text text-sm transition-colors"
+          >
+            Blog
+          </Link>
           <DownloadDropdown />
         </nav>
       </div>

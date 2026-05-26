@@ -8,12 +8,20 @@ export async function POST(request: NextRequest) {
     const { email } = await request.json();
 
     // Basic email validation
-    if (!email || !email.includes('@')) {
+    if (!email || typeof email !== 'string' || !email.includes('@') || email.length > 254) {
       return NextResponse.json(
         { error: 'Invalid email address' },
         { status: 400 }
       );
     }
+
+    // Sanitize email before embedding in HTML to prevent injection
+    const safeEmail = email
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#x27;');
 
     // Send notification to contact@poker-reflex.com
     await resend.emails.send({
@@ -24,7 +32,7 @@ export async function POST(request: NextRequest) {
         <div>
           <h2>New subscriber!</h2>
           <p>A new user subscribed to Poker Reflex updates:</p>
-          <p><strong>Email:</strong> ${email}</p>
+          <p><strong>Email:</strong> ${safeEmail}</p>
           <p><strong>Subscribed at:</strong> ${new Date().toLocaleString()}</p>
         </div>
       `,
