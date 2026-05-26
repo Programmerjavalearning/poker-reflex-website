@@ -94,16 +94,10 @@ export default function Header() {
           <span className="font-heading font-bold text-xl text-text">Poker Reflex</span>
         </Link>
 
-        <nav className="flex items-center gap-6">
-          <a
-            href="#features"
-            className="hidden sm:block text-textSecondary hover:text-text text-sm transition-colors"
-          >
-            Features
-          </a>
+        <nav className="flex items-center gap-4 md:gap-6">
           <Link
             href="/blog"
-            className="hidden sm:block text-textSecondary hover:text-text text-sm transition-colors"
+            className="text-textSecondary hover:text-text text-sm transition-colors"
           >
             Blog
           </Link>
