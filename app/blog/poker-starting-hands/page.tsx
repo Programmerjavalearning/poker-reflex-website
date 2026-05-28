@@ -303,7 +303,15 @@ export default function PokerStartingHandsArticle() {
             <p className="mt-4">
               Offsuit broadways like KJo, QTo, KTo are position-dependent. Raise them from the
               cutoff or button? Fine. Open them under the gun at a full table and you're asking for
-              trouble. When you face a 3-bet or an ace-high flop, these hands become awkward fast.
+              trouble. When you face a{' '}
+              <Link
+                href="/blog/what-is-a-3-bet-in-poker"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                3-bet
+              </Link>{' '}
+              or an ace-high flop, these hands become awkward fast.
             </p>
             <p className="mt-4">
               Any two suited cards: being suited adds roughly <strong style={{ color: 'var(--text)' }}>2 to 3 percent equity</strong> to a hand. It
@@ -340,7 +348,16 @@ export default function PokerStartingHandsArticle() {
             <p>
               Position is the single most important factor in deciding which hands to play. The
               later you act in the betting, the more information you have before making a decision.
-              More information means you can play more hands profitably.
+              More information means you can play more hands profitably. For a full breakdown of
+              every seat at the table,{' '}
+              <Link
+                href="/blog/poker-positions"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                check out our guide to poker positions
+              </Link>
+              .
             </p>
             <p className="mt-4">
               Early position (UTG and UTG+1): you act first throughout most of the hand with almost
@@ -405,13 +422,13 @@ export default function PokerStartingHandsArticle() {
                   Early position (UTG)
                 </span>
                 <span className="text-base" style={{ color: 'var(--text-secondary)' }}>
-                  77+, AQo+, AJs+, KQs
+                  77+, AQo+, ATs+, KQs+
                 </span>
               </div>
               <RangeGrid
                 title="Early Position (UTG)"
                 caption="Early position (UTG) opening range for 6-max Texas Hold'em"
-                ariaLabel="UTG opening range: play 77 and higher pairs, AQ offsuit and higher, AJ suited and higher, KQ suited"
+                ariaLabel="UTG opening range: play 77 and higher pairs, AQ offsuit and higher, AT suited and higher, KQ suited and higher"
                 inRangeHands={[
                   'AA','KK','QQ','JJ','TT','99','88','77',
                   'AKs','AQs','AJs','ATs','KQs','KJs',
@@ -433,13 +450,13 @@ export default function PokerStartingHandsArticle() {
                   Middle position
                 </span>
                 <span className="text-base" style={{ color: 'var(--text-secondary)' }}>
-                  55+, AJo+, ATs+, KQ, KJs, QJs
+                  55+, AJo+, A9s+, KQo, KJs+, QTs+, JTs
                 </span>
               </div>
               <RangeGrid
                 title="Middle Position"
                 caption="Middle position opening range for 6-max Texas Hold'em"
-                ariaLabel="Middle position opening range: play 55 and higher pairs, AJ offsuit and higher, AT suited and higher, KQ, KJ suited, QJ suited"
+                ariaLabel="Middle position opening range: play 55 and higher pairs, AJ offsuit and higher, A9 suited and higher, KQ offsuit, KJ suited and higher, QT suited and higher, JT suited"
                 inRangeHands={[
                   'AA','KK','QQ','JJ','TT','99','88','77','66','55',
                   'AKs','AQs','AJs','ATs','A9s','KQs','KJs','KTs','QJs','QTs','JTs',
@@ -467,7 +484,7 @@ export default function PokerStartingHandsArticle() {
               <RangeGrid
                 title="Late Position (Button)"
                 caption="Button (late position) opening range for 6-max Texas Hold'em"
-                ariaLabel="Button opening range: play all pairs, all suited aces, most suited kings, suited connectors, and many broadway offsuit hands — roughly 40 percent of hands"
+                ariaLabel="Button opening range: play all pairs, all suited aces, most suited kings, suited connectors, and many broadway offsuit hands, roughly 40 percent of hands"
                 inRangeHands={[
                   'AA','KK','QQ','JJ','TT','99','88','77','66','55','44','33','22',
                   'AKs','AQs','AJs','ATs','A9s','A8s','A7s','A6s','A5s','A4s','A3s','A2s',
@@ -525,7 +542,7 @@ export default function PokerStartingHandsArticle() {
               >
                 Poker Reflex
               </a>{' '}
-              trains — until the right play is automatic.
+              trains, until the right play is automatic.
             </p>
 
             {/* H2: Why Memorizing Charts Isn't Enough */}

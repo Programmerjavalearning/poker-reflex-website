@@ -157,7 +157,7 @@ export default function Hero() {
             {/* Glow behind image */}
             <div className="absolute inset-0 bg-green/5 blur-3xl rounded-2xl -z-10" />
 
-            {/* Screenshot container — natural image sizing, zero letterboxing */}
+            {/* Screenshot container - natural image sizing, zero letterboxing */}
             <motion.div
               className="relative overflow-hidden rounded-xl cursor-grab active:cursor-grabbing"
               style={{
@@ -173,7 +173,7 @@ export default function Hero() {
                 else if (info.offset.x > 50) prevSlide()
               }}
             >
-              {/* Invisible spacer — always rendered, holds container height, prevents layout shift */}
+              {/* Invisible spacer - always rendered, holds container height, prevents layout shift */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={screenshots[0].src}
@@ -183,7 +183,7 @@ export default function Hero() {
                 style={{ visibility: 'hidden' }}
                 draggable={false}
               />
-              {/* Fading screenshot — absolutely positioned over the spacer */}
+              {/* Fading screenshot - absolutely positioned over the spacer */}
               <AnimatePresence initial={false} mode="sync">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <motion.img

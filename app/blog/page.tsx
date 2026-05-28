@@ -1,92 +1,107 @@
-import type { Metadata } from 'next'
+'use client'
+
+import { useState } from 'react'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-
-export const metadata: Metadata = {
-  title: 'Poker Blog: Strategy, Tips & Training | Poker Reflex',
-  description: 'Poker strategy articles, bankroll management tips, and preflop training guides from the Poker Reflex team.',
-  alternates: {
-    canonical: 'https://poker-reflex.com/blog',
-  },
-  openGraph: {
-    title: 'Poker Blog: Strategy, Tips & Training | Poker Reflex',
-    description: 'Poker strategy articles, bankroll management tips, and preflop training guides.',
-    url: 'https://poker-reflex.com/blog',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Poker Blog: Strategy, Tips & Training | Poker Reflex',
-    description: 'Poker strategy articles, bankroll management tips, and preflop training guides.',
-  },
-}
-
-const articles = [
-  {
-    slug: 'poker-starting-hands',
-    title: 'Best Starting Hands in Poker: The Complete Chart and Guide',
-    excerpt:
-      "Every hand of poker starts with the same decision: play or fold. This guide covers exactly which hands are worth playing, which to throw away, and how your position changes everything.",
-    readTime: '9 min read',
-  },
-  {
-    slug: 'poker-bankroll-management',
-    title: 'Poker Bankroll Management: The Complete Guide for 2026',
-    excerpt:
-      "Most poker players don't go broke because they're bad at poker. They go broke because they're bad at managing money. This guide breaks down exactly how to protect your bankroll.",
-    readTime: '8 min read',
-  },
-]
+import { articles, categories } from '@/lib/articles'
 
 export default function BlogPage() {
+  const [activeCategory, setActiveCategory] = useState('All')
+
+  const filtered =
+    activeCategory === 'All'
+      ? articles
+      : articles.filter((a) => a.category === activeCategory)
+
   return (
     <>
       <Header />
       <main id="main-content" className="pt-20 min-h-screen" style={{ backgroundColor: 'var(--background)' }}>
-        <section className="max-w-4xl mx-auto px-6 py-16">
+        <section className="max-w-5xl mx-auto px-6 py-16">
           <h1
             className="font-heading font-bold text-4xl md:text-5xl mb-4"
             style={{ color: 'var(--text)' }}
           >
-            Blog
+            Poker Reflex{' '}
+            <span style={{ color: 'var(--green)' }}>Blog</span>
           </h1>
-          <p className="text-lg mb-12" style={{ color: 'var(--text-secondary)' }}>
-            Strategy, bankroll tips, and training guides from the Poker Reflex team.
+          <p className="text-lg mb-10" style={{ color: 'var(--text-secondary)' }}>
+            Guides, strategy, and tips to sharpen your poker game.
           </p>
 
-          <div className="grid gap-6">
-            {articles.map((article) => (
+          {/* Category filter buttons */}
+          <div className="flex flex-wrap gap-3 mb-10">
+            {categories.map((cat) => (
+              <button
+                key={cat}
+                onClick={() => setActiveCategory(cat)}
+                className="px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-150"
+                style={{
+                  backgroundColor:
+                    activeCategory === cat ? 'var(--green)' : 'var(--surface)',
+                  color:
+                    activeCategory === cat ? 'var(--background)' : 'var(--text-secondary)',
+                  border: `1px solid ${activeCategory === cat ? 'var(--green)' : 'var(--border)'}`,
+                }}
+              >
+                {cat}
+              </button>
+            ))}
+          </div>
+
+          {/* Article cards grid */}
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {filtered.map((article) => (
               <Link
                 key={article.slug}
                 href={`/blog/${article.slug}`}
-                className="block rounded-2xl border p-6 transition-all duration-200 hover:border-green/50 hover:shadow-lg group"
+                className="block rounded-2xl border p-6 group"
                 style={{
                   backgroundColor: 'var(--surface)',
                   borderColor: 'var(--border)',
+                  transition: 'transform 0.2s ease, border-color 0.2s ease',
+                  willChange: 'transform',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-4px)'
+                  e.currentTarget.style.borderColor = 'rgba(74, 222, 128, 0.5)'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)'
+                  e.currentTarget.style.borderColor = 'var(--border)'
                 }}
               >
-                <div
-                  className="text-xs font-medium mb-3"
-                  style={{ color: 'var(--green)' }}
+                {/* Category badge */}
+                <span
+                  className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4"
+                  style={{
+                    backgroundColor: 'rgba(74, 222, 128, 0.1)',
+                    color: 'var(--green)',
+                    border: '1px solid rgba(74, 222, 128, 0.25)',
+                  }}
                 >
-                  {article.readTime}
-                </div>
+                  {article.category}
+                </span>
+
                 <h2
-                  className="font-heading font-bold text-xl md:text-2xl mb-3 group-hover:text-green transition-colors"
+                  className="font-heading font-bold text-lg md:text-xl mb-3 group-hover:text-green transition-colors"
                   style={{ color: 'var(--text)' }}
                 >
                   {article.title}
                 </h2>
-                <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--text-secondary)' }}>
+
+                <p
+                  className="text-sm leading-relaxed mb-4"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
                   {article.excerpt}
                 </p>
-                <span
-                  className="text-sm font-semibold group-hover:underline"
-                  style={{ color: 'var(--green)' }}
-                >
-                  Read more →
-                </span>
+
+                <div className="flex items-center justify-between text-xs" style={{ color: 'var(--text-secondary)', opacity: 0.7 }}>
+                  <span>{article.readTime}</span>
+                  <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                </div>
               </Link>
             ))}
           </div>

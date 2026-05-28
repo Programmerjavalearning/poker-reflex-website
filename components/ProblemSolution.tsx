@@ -12,7 +12,7 @@ const differentiators = [
   {
     icon: Target,
     title: 'Comprehensive GTO Ranges',
-    description: 'Professional-grade preflop ranges for every position — UTG through BB, cash games and tournaments.',
+    description: 'Professional-grade preflop ranges for every position, UTG through BB, cash games and tournaments.',
   },
   {
     icon: BarChart2,
