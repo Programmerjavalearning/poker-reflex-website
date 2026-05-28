@@ -159,7 +159,7 @@ export default function BankrollManagementArticle() {
             {/* Intro */}
             <p>
               Most poker players don't go broke because they're bad at poker. They go broke because
-              they're bad at managing money. You can be the sharpest player at the table and still
+              they're bad at <strong style={{ color: 'var(--text)' }}>managing money</strong>. You can be the sharpest player at the table and still
               lose everything if you sit down with your entire bankroll on the line. Bankroll
               management is the boring part of poker that nobody wants to talk about, and it's also
               the single biggest reason some players last for years while others quit after a brutal
@@ -184,7 +184,7 @@ export default function BankrollManagementArticle() {
               you ever bring to the table.
             </p>
             <p className="mt-4">
-              The golden rule: never play with money you can't afford to lose. That sounds simple,
+              The golden rule: never play with <strong style={{ color: 'var(--text)' }}>money you can't afford to lose</strong>. That sounds simple,
               but a surprising number of players ignore it. Say you have $1,500 in savings and you
               decide to use $500 of it to play poker. If that $500 is also covering part of your
               phone bill next month, it's not really a poker bankroll. It's just borrowed time. Real
@@ -204,13 +204,13 @@ export default function BankrollManagementArticle() {
             </h2>
             <p>
               Variance is the word poker players use to explain bad luck, and it's brutal. Even a
-              winning player at a given stake can lose 10, 20, sometimes 30 buy-ins in a row without
+              winning player at a given stake can lose 10, 20, sometimes <strong style={{ color: 'var(--text)' }}>30 buy-ins in a row</strong> without
               making any major mistakes. That's just how the math works. If you're playing $100
               buy-ins and you only have $500 in your bankroll, a completely normal downswing wipes
               you out before your edge has time to show.
             </p>
             <p className="mt-4">
-              But here's the part that gets overlooked. When you're underrolled, you play scared.
+              But here's the part that gets overlooked. When you're underrolled, you <strong style={{ color: 'var(--text)' }}>play scared</strong>.
               You fold too much in marginal spots because every pot feels life-or-death. You can't
               make the aggressive plays your strategy requires because you're terrified of busting.
               So you stop being a winning player, not because you got worse, but because financial
@@ -240,7 +240,7 @@ export default function BankrollManagementArticle() {
               Cash Games
             </h3>
             <p>
-              The standard guideline for cash games is 20 to 30 buy-ins for the stake you're
+              The standard guideline for cash games is <strong style={{ color: 'var(--text)' }}>20 to 30 buy-ins</strong> for the stake you're
               playing. So if you're sitting at a $0.50/$1 table with a $100 max buy-in, you'd want
               $2,000 to $3,000 in your bankroll before playing that level regularly. More
               conservative players go for 40 to 50 buy-ins, especially if the game is tough or
@@ -256,7 +256,7 @@ export default function BankrollManagementArticle() {
               Tournaments
             </h3>
             <p>
-              Tournament variance is a whole different beast. The rule jumps to 100 buy-ins or more,
+              Tournament variance is a whole different beast. The rule jumps to <strong style={{ color: 'var(--text)' }}>100 buy-ins or more</strong>,
               and for good reason. In a tournament, you can play a near-perfect game and cash zero
               times across 30 events. That's not a bad run. That's just the structure working
               against you. The bigger the field, the higher the variance, and the more cushion you
@@ -290,14 +290,14 @@ export default function BankrollManagementArticle() {
               nobody wants to think about. But both matter just as much.
             </p>
             <p className="mt-4">
-              The rule for moving up is simple: you need the bankroll AND a proven win rate at your
+              The rule for moving up is simple: you need the bankroll AND a <strong style={{ color: 'var(--text)' }}>proven win rate</strong> at your
               current stake. Having 30 buy-ins for the next level doesn't mean you're ready if
               you're barely breaking even where you are. Take your time. Build both the bankroll and
               the confidence through actual results, not just through ambition.
             </p>
             <p className="mt-4">
               Moving down is harder psychologically, but it's the move that saves bankrolls. If your
-              stack drops below the threshold for your current stake, move down. No ego, no
+              stack drops below the threshold for your current stake, <strong style={{ color: 'var(--text)' }}>move down</strong>. No ego, no
               negotiations with yourself. This is where most players fail. They keep playing the
               same level while their bankroll shrinks, telling themselves they're due for a heater.
               Sometimes that heater comes. Often, it doesn't come fast enough and they bust. The
@@ -326,7 +326,7 @@ export default function BankrollManagementArticle() {
               harder, not easier.
             </p>
             <p className="mt-4">
-              Not tracking results is another silent killer. Without a session log, you're
+              <strong style={{ color: 'var(--text)' }}>Not tracking results</strong> is another silent killer. Without a session log, you're
               guessing about whether you're actually winning. Perception bias is real: players
               remember the big wins clearly and blur the losing sessions. Track every session, even
               if it's just a note in your phone with date, stake, buy-in, and result.
@@ -337,7 +337,7 @@ export default function BankrollManagementArticle() {
               weight it shouldn't. Keep them separate, always.
             </p>
             <p className="mt-4">
-              Chasing losses mid-session is a version of the same problem. You're stuck two buy-ins
+              <strong style={{ color: 'var(--text)' }}>Chasing losses</strong> mid-session is a version of the same problem. You're stuck two buy-ins
               and you reload a third time, playing a looser, more aggressive style to get back to
               even fast. That third buy-in is usually gone faster than the first two.
             </p>
@@ -368,7 +368,7 @@ export default function BankrollManagementArticle() {
               </li>
               <li>
                 Pick your stake based on the buy-in rule. For cash games, pick the highest stake
-                where your bankroll covers at least 20 buy-ins. For tournaments, aim for 100.
+                where your bankroll covers at least <strong style={{ color: 'var(--text)' }}>20 buy-ins</strong>. For tournaments, aim for 100.
               </li>
               <li>
                 Track every session. Date, game type, stake, hours played, result. Five seconds of
@@ -400,15 +400,22 @@ export default function BankrollManagementArticle() {
             </h2>
             <p>
               The best bankroll protection isn't a spreadsheet. It's making fewer mistakes in the
-              first place. Most leaks start before the flop. Players who bleed money slowly are
+              first place. <strong style={{ color: 'var(--text)' }}>Most leaks start before the flop.</strong> Players who bleed money slowly are
               usually the ones guessing at preflop decisions instead of knowing them. They call 3-bets
               with hands they should fold. They open too wide from early position. They don't know
               their 4-bet range. These spots come up constantly, and getting them wrong is expensive
               over thousands of hands.
             </p>
             <p className="mt-4">
-              If you want your bankroll to go further, sharpen your preflop game first. That's where
-              the biggest leaks are, and that's where the most reliable improvements come from.
+              If you want your bankroll to go further, sharpen your preflop game first. Start with{' '}
+              <Link
+                href="/blog/poker-starting-hands"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                getting your starting hand selection right
+              </Link>
+              , and the rest follows naturally.
             </p>
 
             {/* CTA Box 2 */}
@@ -431,8 +438,8 @@ export default function BankrollManagementArticle() {
               Bankroll management is what separates players who last from players who flame out.
               It's not glamorous, it's not the part anyone talks about at the table, and it takes
               real discipline to follow when variance is punching you in the face. But the players
-              who are still grinding five years from now are the ones who took it seriously from the
-              start.
+              who are still grinding five years from now are the ones who <strong style={{ color: 'var(--text)' }}>took it seriously from the
+              start</strong>.
             </p>
             <p className="mt-4">
               Set the rules, follow them without exceptions, and let the math do the rest. Your

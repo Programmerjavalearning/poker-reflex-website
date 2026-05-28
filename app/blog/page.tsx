@@ -24,10 +24,17 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    slug: 'poker-starting-hands',
+    title: 'Best Starting Hands in Poker: The Complete Chart and Guide',
+    excerpt:
+      "Every hand of poker starts with the same decision: play or fold. This guide covers exactly which hands are worth playing, which to throw away, and how your position changes everything.",
+    readTime: '9 min read',
+  },
+  {
     slug: 'poker-bankroll-management',
     title: 'Poker Bankroll Management: The Complete Guide for 2026',
     excerpt:
-      'Most poker players don\'t go broke because they\'re bad at poker. They go broke because they\'re bad at managing money. This guide breaks down exactly how to protect your bankroll.',
+      "Most poker players don't go broke because they're bad at poker. They go broke because they're bad at managing money. This guide breaks down exactly how to protect your bankroll.",
     readTime: '8 min read',
   },
 ]
