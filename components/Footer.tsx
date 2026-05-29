@@ -91,6 +91,14 @@ export default function Footer() {
             </li>
             <li>
               <a
+                href="/support"
+                className="text-textSecondary hover:text-text text-sm transition-colors"
+              >
+                Support
+              </a>
+            </li>
+            <li>
+              <a
                 href="mailto:contact@poker-reflex.com"
                 className="text-textSecondary hover:text-text text-sm transition-colors"
               >
