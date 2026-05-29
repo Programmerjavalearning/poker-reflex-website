@@ -625,7 +625,15 @@ export default function PokerStartingHandsArticle() {
             <p className="mt-4">
               Start simple: play tight in early position, open up on the button, avoid dominated
               hands, and respect position. Those four things alone will put you ahead of a huge
-              portion of the field.
+              portion of the field. And when you're ready to understand the math behind these
+              ranges, check out our{' '}
+              <Link
+                href="/blog/gto-poker-for-beginners"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                guide to GTO poker for beginners
+              </Link>.
             </p>
 
             {/* CTA Box 2 */}

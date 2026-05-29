@@ -601,7 +601,16 @@ export default function ThreeBetArticle() {
               that feels natural, start adding bluff 3-bets against late position opens with hands
               like A5s and A4s. Pay attention to position, size correctly, and fold when you get
               4-bet with your weakest hands. The players who master this win more pots without
-              ever seeing a flop, and that's one of the most efficient ways to grow a stack.
+              ever seeing a flop, and that's one of the most efficient ways to grow a stack. If
+              you want to understand why these ranges are structured the way they are, our{' '}
+              <Link
+                href="/blog/gto-poker-for-beginners"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                guide to GTO poker for beginners
+              </Link>{' '}
+              breaks down the theory behind it.
             </p>
 
             {/* CTA Box 2 */}

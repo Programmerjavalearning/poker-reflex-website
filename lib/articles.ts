@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'gto-poker-for-beginners',
+    title: 'GTO Poker for Beginners: What It Means and How to Start',
+    excerpt:
+      'What GTO poker really means, why it matters even at low stakes, and a clear path to learn it without drowning in solvers.',
+    category: 'Fundamentals',
+    readTime: '12 min read',
+    date: '2026-05-29',
+  },
+  {
     slug: 'what-is-a-3-bet-in-poker',
     title: 'What Is a 3-Bet in Poker? When and How to Use It',
     excerpt:

@@ -606,7 +606,15 @@ export default function PokerPositionsArticle() {
               from every seat, call the same bets regardless of whether they're in or out of
               position, and wonder why their results are flat. Mastering position won't turn you
               into a world-class player overnight. But it will put you solidly ahead of most of
-              the competition, and that's where the profit lives.
+              the competition, and that's where the profit lives. To see how position ties into
+              a complete preflop strategy, take a look at our{' '}
+              <Link
+                href="/blog/gto-poker-for-beginners"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                introduction to GTO poker
+              </Link>.
             </p>
 
             {/* CTA Box 2 */}

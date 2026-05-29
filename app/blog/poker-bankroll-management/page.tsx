@@ -415,6 +415,14 @@ export default function BankrollManagementArticle() {
               >
                 getting your starting hand selection right
               </Link>
+              , learn the basics of{' '}
+              <Link
+                href="/blog/gto-poker-for-beginners"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                GTO poker
+              </Link>
               , and the rest follows naturally.
             </p>
 
