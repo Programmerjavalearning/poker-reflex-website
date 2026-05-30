@@ -7,7 +7,10 @@ const HOST = 'poker-reflex.com'
 export async function POST(request: NextRequest) {
   try {
     // Security: require a secret token in the Authorization header
-    const authHeader = request.headers.get('authorization')
+    const authHeader =
+      request.headers.get('authorization') ||
+      request.headers.get('Authorization') ||
+      ''
     const expectedToken = process.env.INDEXNOW_SECRET
 
     if (!expectedToken) {
@@ -16,6 +19,10 @@ export async function POST(request: NextRequest) {
 
     // === TEMPORARY DEBUG LOGS - REMOVE AFTER DIAGNOSIS ===
     console.log('=== INDEXNOW DEBUG START ===')
+    console.log('All headers received:')
+    request.headers.forEach((value, key) => {
+      console.log(`  ${key}: ${value.substring(0, 20)}${value.length > 20 ? '...' : ''}`)
+    })
     console.log('authHeader present:', !!authHeader)
     console.log('authHeader length:', authHeader?.length ?? 0)
     console.log('authHeader first 15 chars:', authHeader?.substring(0, 15))
