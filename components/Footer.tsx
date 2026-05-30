@@ -91,6 +91,14 @@ export default function Footer() {
             </li>
             <li>
               <a
+                href="/contact"
+                className="text-textSecondary hover:text-text text-sm transition-colors"
+              >
+                Contact
+              </a>
+            </li>
+            <li>
+              <a
                 href="/support"
                 className="text-textSecondary hover:text-text text-sm transition-colors"
               >
