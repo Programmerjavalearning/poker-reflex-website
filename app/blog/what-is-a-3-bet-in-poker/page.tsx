@@ -432,7 +432,15 @@ export default function ThreeBetArticle() {
             <p className="mt-4">
               In tournaments with <strong style={{ color: 'var(--text)' }}>shorter stacks</strong>, sizes drop because the effective stack
               doesn't leave room for big 3-bets. A 2.2x to 2.5x 3-bet still applies plenty of
-              pressure when everyone has 25 to 40 big blinds.
+              pressure when everyone has 25 to 40 big blinds. For a broader look at how sizing
+              works across all bet types (opens, c-bets, value bets, and bluffs), see our full{' '}
+              <Link
+                href="/blog/poker-bet-sizing"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                poker bet sizing guide
+              </Link>.
             </p>
 
             {/* H2: Position Changes Everything */}

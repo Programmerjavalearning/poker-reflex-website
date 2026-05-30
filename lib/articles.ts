@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'poker-bet-sizing',
+    title: 'Poker Bet Sizing: How Much Should You Actually Bet?',
+    excerpt:
+      'A clear guide to sizing your bets and raises preflop and postflop, with simple rules and real examples.',
+    category: 'Fundamentals',
+    readTime: '9 min read',
+    date: '2026-05-30',
+  },
+  {
     slug: 'gto-poker-for-beginners',
     title: 'GTO Poker for Beginners: What It Means and How to Start',
     excerpt:
