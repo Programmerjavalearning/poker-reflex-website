@@ -6,36 +6,15 @@ const HOST = 'poker-reflex.com'
 
 export async function POST(request: NextRequest) {
   try {
-    // Security: require a secret token in the Authorization header
-    const authHeader =
-      request.headers.get('authorization') ||
-      request.headers.get('Authorization') ||
-      ''
+    // Security: require a secret token in a custom header
+    const providedSecret = request.headers.get('x-indexnow-secret') || ''
     const expectedToken = process.env.INDEXNOW_SECRET
 
     if (!expectedToken) {
       return NextResponse.json({ error: 'Server misconfigured' }, { status: 500 })
     }
 
-    // === TEMPORARY DEBUG LOGS - REMOVE AFTER DIAGNOSIS ===
-    console.log('=== INDEXNOW DEBUG START ===')
-    console.log('All headers received:')
-    request.headers.forEach((value, key) => {
-      console.log(`  ${key}: ${value.substring(0, 20)}${value.length > 20 ? '...' : ''}`)
-    })
-    console.log('authHeader present:', !!authHeader)
-    console.log('authHeader length:', authHeader?.length ?? 0)
-    console.log('authHeader first 15 chars:', authHeader?.substring(0, 15))
-    console.log('expectedToken present:', !!expectedToken)
-    console.log('expectedToken length:', expectedToken?.length ?? 0)
-    console.log('expectedToken first 5 chars:', expectedToken?.substring(0, 5))
-    console.log('expectedToken last 5 chars:', expectedToken?.substring((expectedToken?.length ?? 0) - 5))
-    console.log('Expected full bearer length:', `Bearer ${expectedToken}`.length)
-    console.log('Match check:', authHeader === `Bearer ${expectedToken}`)
-    console.log('=== INDEXNOW DEBUG END ===')
-    // === END TEMPORARY DEBUG ===
-
-    if (authHeader !== `Bearer ${expectedToken}`) {
+    if (providedSecret !== expectedToken) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 

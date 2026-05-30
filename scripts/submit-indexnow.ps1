@@ -29,7 +29,7 @@ try {
     $response = Invoke-WebRequest `
         -Uri "https://poker-reflex.com/api/indexnow" `
         -Method Post `
-        -Headers @{ "Authorization" = "Bearer $secret" } `
+        -Headers @{ "x-indexnow-secret" = $secret } `
         -Body $body `
         -ContentType "application/json" `
         -UseBasicParsing
