@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import Script from 'next/script'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,29 +15,37 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://poker-reflex.com'),
+  metadataBase: new URL(SITE_URL),
   title: 'Poker Reflex: GTO Preflop Trainer App | Master Poker Strategy',
   description: 'Train open, 3-bet, 4-bet, and all-in decisions with our swipe-based GTO poker trainer. Build unshakeable preflop reflexes through fast repetition and clear feedback.',
   keywords: 'poker training, GTO poker, preflop trainer, poker ranges, poker app, poker reflex, poker strategy, 3-bet trainer, 4-bet trainer',
   alternates: {
-    canonical: 'https://poker-reflex.com',
+    canonical: SITE_URL,
   },
   icons: {
-    icon: '/logo.png',
-    shortcut: '/logo.png',
-    apple: '/logo.png',
+    icon: BRAND_ASSETS.squareLogoPath,
+    shortcut: BRAND_ASSETS.squareLogoPath,
+    apple: BRAND_ASSETS.squareLogoPath,
   },
   openGraph: {
     title: 'Poker Reflex: GTO Preflop Trainer',
     description: 'Master open, 3-bet, 4-bet, and all-in decisions. Join players building GTO reflexes with our swipe-based trainer.',
-    images: ['https://play-lh.googleusercontent.com/AU6n_bA3kDocqmgkFSHMYVA4ZI3T4QNgjEjzkZo7y9jMZ2ujJ8lSpsuDHIfXPB0X5l8IGGz3qRqNHiXV2JgXUA=w240-h480'],
-    url: 'https://poker-reflex.com',
+    images: [
+      {
+        url: BRAND_ASSETS.squareLogoUrl,
+        width: 512,
+        height: 512,
+        alt: 'Poker Reflex logo',
+      },
+    ],
+    url: SITE_URL,
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Poker Reflex: GTO Preflop Trainer',
     description: 'Train open, 3-bet, 4-bet, and all-in scenarios. Master every preflop decision with simple swipes.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 
@@ -67,8 +76,17 @@ export default function RootLayout({
             applicationCategory: 'GameApplication',
             offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
             aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', ratingCount: '80' },
-            url: 'https://poker-reflex.com',
+            url: SITE_URL,
             installUrl: 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex',
+          })}
+        </Script>
+        <Script id="schema-organization" type="application/ld+json" strategy="afterInteractive">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'Poker Reflex',
+            url: SITE_URL,
+            logo: BRAND_ASSETS.squareLogoUrl,
           })}
         </Script>
 

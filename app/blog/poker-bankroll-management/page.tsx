@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Poker Bankroll Management: The Complete Guide for 2026',
@@ -10,15 +11,15 @@ export const metadata: Metadata = {
   keywords:
     'poker bankroll management, bankroll rules poker, how much bankroll poker, poker money management, cash game bankroll, tournament bankroll',
   alternates: {
-    canonical: 'https://poker-reflex.com/blog/poker-bankroll-management',
+    canonical: `${SITE_URL}/blog/poker-bankroll-management`,
   },
   openGraph: {
     title: 'Poker Bankroll Management: The Complete Guide for 2026',
     description:
       'Practical bankroll rules, common mistakes, and a simple system to protect your money and play with confidence.',
-    url: 'https://poker-reflex.com/blog/poker-bankroll-management',
+    url: `${SITE_URL}/blog/poker-bankroll-management`,
     type: 'article',
-    images: ['/logo.png'],
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
   twitter: {
     card: 'summary_large_image',
@@ -42,14 +43,14 @@ const articleSchema = {
     name: 'Poker Reflex',
     logo: {
       '@type': 'ImageObject',
-      url: 'https://poker-reflex.com/logo.png',
+      url: BRAND_ASSETS.squareLogoUrl,
     },
   },
   datePublished: '2026-05-18',
   dateModified: '2026-05-18',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://poker-reflex.com/blog/poker-bankroll-management',
+    '@id': `${SITE_URL}/blog/poker-bankroll-management`,
   },
 }
 

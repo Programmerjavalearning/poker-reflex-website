@@ -2,17 +2,18 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Support | Poker Reflex',
   description: 'Get help with Poker Reflex. Contact support, manage your account, request data deletion, and learn about common topics.',
   alternates: {
-    canonical: 'https://poker-reflex.com/support',
+    canonical: `${SITE_URL}/support`,
   },
   openGraph: {
     title: 'Support | Poker Reflex',
     description: 'Get help with Poker Reflex. Contact support, manage your account, request data deletion, and learn about common topics.',
-    url: 'https://poker-reflex.com/support',
+    url: `${SITE_URL}/support`,
     type: 'website',
   },
   twitter: {
@@ -151,6 +152,12 @@ export default function SupportPage() {
             </h2>
             <p>
               To help us resolve your issue quickly, please include:
+            </p>
+            <p className="mt-3">
+              You can optionally attach screenshots when contacting support from inside the app.
+              Screenshots help us understand bugs or account/app issues more quickly, but they are
+              not required. Before attaching a screenshot, please make sure you are comfortable
+              sharing everything visible in the image.
             </p>
             <ul className="mt-3 space-y-2 pl-6 list-disc">
               <li>Device model and operating system version</li>

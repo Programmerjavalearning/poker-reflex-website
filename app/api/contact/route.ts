@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
-
-const resend = new Resend(process.env.RESEND_API_KEY)
+import { BRAND_ASSETS } from '@/lib/brand'
 
 const ALLOWED_TYPES = ['Partnership', 'Creator / Affiliate', 'Press / Media', 'General inquiry'] as const
 type InquiryType = (typeof ALLOWED_TYPES)[number]
@@ -24,6 +23,16 @@ function escapeHtml(text: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#x27;')
+}
+
+function getResendClient(): Resend {
+  const apiKey = process.env.RESEND_API_KEY
+
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not configured')
+  }
+
+  return new Resend(apiKey)
 }
 
 export async function POST(request: NextRequest) {
@@ -106,13 +115,16 @@ export async function POST(request: NextRequest) {
       ? `<p><strong>Company:</strong> ${escapeHtml(safeCompany)}</p>`
       : ''
 
+    const resend = getResendClient()
+
     await resend.emails.send({
       from: 'Poker Reflex Contact <noreply@updates.poker-reflex.com>',
       to: 'contact@poker-reflex.com',
       replyTo: safeEmail,
       subject,
       html: `
-        <div style="font-family: sans-serif; max-width: 600px;">
+        <div style="font-family: Arial, sans-serif; max-width: 600px;">
+          <img src="${BRAND_ASSETS.emailLogoUrl}" width="160" alt="Poker Reflex" style="display: block; width: 160px; max-width: 160px; height: auto; margin-bottom: 24px;" />
           <h2>${escapeHtml(prefix)} Contact Form Submission</h2>
           <hr style="border: 1px solid #eee;" />
           <p><strong>Inquiry Type:</strong> ${escapeHtml(inquiryType)}</p>

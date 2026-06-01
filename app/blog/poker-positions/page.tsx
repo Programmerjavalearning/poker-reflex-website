@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Poker Positions Explained: UTG to Button (2026 Guide)',
@@ -10,15 +11,15 @@ export const metadata: Metadata = {
   keywords:
     'poker positions, poker position explained, UTG poker, button poker, hijack cutoff poker, poker table positions, early middle late position poker',
   alternates: {
-    canonical: 'https://poker-reflex.com/blog/poker-positions',
+    canonical: `${SITE_URL}/blog/poker-positions`,
   },
   openGraph: {
     title: 'Poker Positions Explained: UTG to Button',
     description:
       'Every seat at the table explained, why position wins, and how to use it.',
-    url: 'https://poker-reflex.com/blog/poker-positions',
+    url: `${SITE_URL}/blog/poker-positions`,
     type: 'article',
-    images: ['/logo.png'],
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
   twitter: {
     card: 'summary_large_image',
@@ -38,13 +39,13 @@ const articleSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Poker Reflex',
-    logo: { '@type': 'ImageObject', url: 'https://poker-reflex.com/logo.png' },
+    logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
   datePublished: '2026-05-28',
   dateModified: '2026-05-28',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://poker-reflex.com/blog/poker-positions',
+    '@id': `${SITE_URL}/blog/poker-positions`,
   },
 }
 

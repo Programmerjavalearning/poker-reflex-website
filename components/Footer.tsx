@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { BRAND_ASSETS } from '@/lib/brand'
 
 export default function Footer() {
   return (
@@ -10,10 +11,11 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-2 mb-3">
             <Image
-              src="/logo.png"
+              src={BRAND_ASSETS.emailLogoPath}
               alt="Poker Reflex logo"
               width={28}
               height={28}
+              unoptimized
               className="rounded-lg"
             />
             <span className="font-heading font-bold text-text">Poker Reflex</span>
@@ -103,6 +105,14 @@ export default function Footer() {
                 className="text-textSecondary hover:text-text text-sm transition-colors"
               >
                 Support
+              </a>
+            </li>
+            <li>
+              <a
+                href="/brand"
+                className="text-textSecondary hover:text-text text-sm transition-colors"
+              >
+                Brand Assets
               </a>
             </li>
             <li>

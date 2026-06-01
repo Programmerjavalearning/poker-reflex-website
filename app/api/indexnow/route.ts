@@ -1,8 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { SITE_URL } from '@/lib/brand'
 
 const INDEXNOW_KEY = '46f36b2948104bc49b915173f6e23ae5'
-const INDEXNOW_KEY_LOCATION = 'https://poker-reflex.com/46f36b2948104bc49b915173f6e23ae5.txt'
-const HOST = 'poker-reflex.com'
+const INDEXNOW_KEY_LOCATION = `${SITE_URL}/46f36b2948104bc49b915173f6e23ae5.txt`
+const HOST = 'www.poker-reflex.com'
+const ALLOWED_HOSTS = ['poker-reflex.com', HOST]
 
 export async function POST(request: NextRequest) {
   try {
@@ -28,7 +30,15 @@ export async function POST(request: NextRequest) {
 
     // Validate URLs all belong to our host
     for (const url of urls) {
-      if (!url.startsWith(`https://${HOST}`) && !url.startsWith(`https://www.${HOST}`)) {
+      let parsedUrl: URL
+
+      try {
+        parsedUrl = new URL(url)
+      } catch {
+        return NextResponse.json({ error: `URL does not match host` }, { status: 400 })
+      }
+
+      if (parsedUrl.protocol !== 'https:' || !ALLOWED_HOSTS.includes(parsedUrl.hostname)) {
         return NextResponse.json({ error: `URL does not match host` }, { status: 400 })
       }
     }

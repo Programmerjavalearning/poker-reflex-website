@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'What Is a 3-Bet in Poker? When and How to Use It (2026)',
@@ -10,15 +11,15 @@ export const metadata: Metadata = {
   keywords:
     '3-bet poker, what is a 3-bet, 3bet meaning poker, when to 3-bet, 3-bet bluff, 3-bet sizing, 3-bet range poker',
   alternates: {
-    canonical: 'https://poker-reflex.com/blog/what-is-a-3-bet-in-poker',
+    canonical: `${SITE_URL}/blog/what-is-a-3-bet-in-poker`,
   },
   openGraph: {
     title: 'What Is a 3-Bet in Poker? When and How to Use It',
     description:
       'What a 3-bet means, when to do it for value or as a bluff, and how to size it.',
-    url: 'https://poker-reflex.com/blog/what-is-a-3-bet-in-poker',
+    url: `${SITE_URL}/blog/what-is-a-3-bet-in-poker`,
     type: 'article',
-    images: ['/logo.png'],
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
   twitter: {
     card: 'summary_large_image',
@@ -38,13 +39,13 @@ const articleSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Poker Reflex',
-    logo: { '@type': 'ImageObject', url: 'https://poker-reflex.com/logo.png' },
+    logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
   datePublished: '2026-05-28',
   dateModified: '2026-05-28',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://poker-reflex.com/blog/what-is-a-3-bet-in-poker',
+    '@id': `${SITE_URL}/blog/what-is-a-3-bet-in-poker`,
   },
 }
 

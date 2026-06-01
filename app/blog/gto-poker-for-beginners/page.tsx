@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'GTO Poker for Beginners: What It Means and How to Start | Poker Reflex',
@@ -18,13 +19,13 @@ export const metadata: Metadata = {
     'GTO strategy poker',
   ],
   alternates: {
-    canonical: 'https://poker-reflex.com/blog/gto-poker-for-beginners',
+    canonical: `${SITE_URL}/blog/gto-poker-for-beginners`,
   },
   openGraph: {
     title: 'GTO Poker for Beginners: What It Means and How to Start',
     description:
       'What GTO poker really means, why it matters even at low stakes, and a clear step-by-step path to learn it without drowning in solvers.',
-    url: 'https://poker-reflex.com/blog/gto-poker-for-beginners',
+    url: `${SITE_URL}/blog/gto-poker-for-beginners`,
     siteName: 'Poker Reflex',
     type: 'article',
     locale: 'en_US',
@@ -47,13 +48,13 @@ const articleSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Poker Reflex',
-    logo: { '@type': 'ImageObject', url: 'https://poker-reflex.com/logo.png' },
+    logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
   datePublished: '2026-05-29',
   dateModified: '2026-05-29',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://poker-reflex.com/blog/gto-poker-for-beginners',
+    '@id': `${SITE_URL}/blog/gto-poker-for-beginners`,
   },
 }
 

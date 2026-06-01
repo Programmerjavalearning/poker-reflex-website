@@ -2,17 +2,18 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Poker Reflex',
   description: 'Privacy Policy for the Poker Reflex poker training app. Learn how your data is collected, stored, and used.',
   alternates: {
-    canonical: 'https://poker-reflex.com/privacy-policy',
+    canonical: `${SITE_URL}/privacy-policy`,
   },
   openGraph: {
     title: 'Privacy Policy | Poker Reflex',
     description: 'Privacy Policy for the Poker Reflex poker training app. Learn how your data is collected, stored, and used.',
-    url: 'https://poker-reflex.com/privacy-policy',
+    url: `${SITE_URL}/privacy-policy`,
     type: 'website',
   },
   twitter: {
@@ -135,6 +136,23 @@ export default function PrivacyPolicyPage() {
               included by the app.
             </p>
             <p className="mt-3">
+              When you contact Poker Reflex support from within the app, you may choose to attach
+              screenshots to help us understand and resolve your issue. Attaching screenshots is
+              optional, and you can submit a support request without providing any screenshots.
+            </p>
+            <p className="mt-3">
+              If you attach a screenshot, it may contain personal information depending on what is
+              visible in the image you selected. We use support screenshots only to investigate,
+              debug, reproduce, and resolve the support request you submitted. We do not use support
+              screenshots for advertising, tracking, profiling, or unrelated analytics.
+            </p>
+            <p className="mt-3">
+              Support screenshots are transmitted through our support flow, stored in private
+              restricted-access storage, and may be made available to our support/development team
+              through temporary access links. Access is limited to team members who need it to
+              handle the support request.
+            </p>
+            <p className="mt-3">
               Poker Reflex uses Resend to send transactional support notification emails to the
               support inbox. Resend may process email delivery metadata for those transactional
               messages. Poker Reflex does not send marketing email from this support flow.
@@ -195,6 +213,7 @@ export default function PrivacyPolicyPage() {
               to request account and data deletion. Some limited records may be retained only
               where needed for security, abuse prevention, or legal compliance.
             </p>
+            {/* TODO: Confirm support screenshot retention/deletion timing with product/legal before release. */}
 
             <h2
               className="font-heading font-bold text-xl md:text-2xl mt-10 mb-4 pl-4"

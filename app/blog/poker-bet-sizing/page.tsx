@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Poker Bet Sizing: How Much Should You Actually Bet? (2026 Guide)',
@@ -10,15 +11,15 @@ export const metadata: Metadata = {
   keywords:
     'poker bet sizing, how much to bet in poker, poker bet size strategy, c-bet sizing, preflop bet sizing, pot size bet, postflop bet sizing',
   alternates: {
-    canonical: 'https://poker-reflex.com/blog/poker-bet-sizing',
+    canonical: `${SITE_URL}/blog/poker-bet-sizing`,
   },
   openGraph: {
     title: 'Poker Bet Sizing: How Much Should You Actually Bet?',
     description:
       'Simple rules and real examples for sizing your bets preflop and postflop.',
-    url: 'https://poker-reflex.com/blog/poker-bet-sizing',
+    url: `${SITE_URL}/blog/poker-bet-sizing`,
     type: 'article',
-    images: ['/logo.png'],
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
   twitter: {
     card: 'summary_large_image',
@@ -38,13 +39,13 @@ const articleSchema = {
   publisher: {
     '@type': 'Organization',
     name: 'Poker Reflex',
-    logo: { '@type': 'ImageObject', url: 'https://poker-reflex.com/logo.png' },
+    logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
   datePublished: '2026-05-30',
   dateModified: '2026-05-30',
   mainEntityOfPage: {
     '@type': 'WebPage',
-    '@id': 'https://poker-reflex.com/blog/poker-bet-sizing',
+    '@id': `${SITE_URL}/blog/poker-bet-sizing`,
   },
 }
 

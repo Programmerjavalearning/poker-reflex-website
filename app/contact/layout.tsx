@@ -1,19 +1,20 @@
 import type { Metadata } from 'next'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Poker Reflex',
   description:
     'Get in touch with Poker Reflex for partnerships, creator collaborations, press inquiries, or general questions.',
   alternates: {
-    canonical: 'https://poker-reflex.com/contact',
+    canonical: `${SITE_URL}/contact`,
   },
   openGraph: {
     title: 'Contact Poker Reflex',
     description:
       'Partnerships, creators, press, or general inquiries.',
-    url: 'https://poker-reflex.com/contact',
+    url: `${SITE_URL}/contact`,
     type: 'website',
-    images: ['/logo.png'],
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
   robots: { index: true, follow: true },
 }

@@ -1,7 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
+import { BRAND_ASSETS } from '@/lib/brand';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient(): Resend {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error('RESEND_API_KEY is not configured');
+  }
+
+  return new Resend(apiKey);
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,12 +33,15 @@ export async function POST(request: NextRequest) {
       .replace(/'/g, '&#x27;');
 
     // Send notification to contact@poker-reflex.com
+    const resend = getResendClient();
+
     await resend.emails.send({
       from: 'Poker Reflex <noreply@updates.poker-reflex.com>',
       to: 'contact@poker-reflex.com',
       subject: 'New Newsletter Subscriber',
       html: `
-        <div>
+        <div style="font-family: Arial, sans-serif; max-width: 600px;">
+          <img src="${BRAND_ASSETS.emailLogoUrl}" width="160" alt="Poker Reflex" style="display: block; width: 160px; max-width: 160px; height: auto; margin-bottom: 24px;" />
           <h2>New subscriber!</h2>
           <p>A new user subscribed to Poker Reflex updates:</p>
           <p><strong>Email:</strong> ${safeEmail}</p>

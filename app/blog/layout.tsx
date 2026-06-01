@@ -1,17 +1,18 @@
 import type { Metadata } from 'next'
+import { SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Poker Blog: Strategy, Tips & Training | Poker Reflex',
   description:
     'Poker strategy articles, bankroll management tips, and preflop training guides from the Poker Reflex team.',
   alternates: {
-    canonical: 'https://poker-reflex.com/blog',
+    canonical: `${SITE_URL}/blog`,
   },
   openGraph: {
     title: 'Poker Blog: Strategy, Tips & Training | Poker Reflex',
     description:
       'Poker strategy articles, bankroll management tips, and preflop training guides.',
-    url: 'https://poker-reflex.com/blog',
+    url: `${SITE_URL}/blog`,
     type: 'website',
   },
   twitter: {

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BRAND_ASSETS } from '@/lib/brand'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
 
@@ -84,10 +85,11 @@ export default function Header() {
       <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src={BRAND_ASSETS.emailLogoPath}
             alt="Poker Reflex logo"
             width={52}
             height={52}
+            unoptimized
             className="rounded-lg"
             style={{ imageRendering: 'crisp-edges' }}
           />
@@ -107,4 +109,3 @@ export default function Header() {
     </header>
   )
 }
-
