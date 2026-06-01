@@ -187,6 +187,10 @@ export default function PrivacyPolicyPage() {
               or upload audio to any server. If a future build adds microphone recording or remote
               audio upload, this policy will be updated before release.
             </p>
+            <p className="mt-3">
+              Poker Reflex may request access to your photo library only when you choose to attach
+              screenshots to a support request.
+            </p>
 
             <h2
               className="font-heading font-bold text-xl md:text-2xl mt-10 mb-4 pl-4"

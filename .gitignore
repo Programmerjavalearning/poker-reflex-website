@@ -40,3 +40,6 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Temporary prompt 
+prompt.md
