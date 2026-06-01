@@ -13,6 +13,18 @@ export const metadata: Metadata = {
     index: false,
     follow: true,
   },
+  openGraph: {
+    title: 'Brand Assets | Poker Reflex',
+    description: 'Public Poker Reflex logo assets.',
+    url: `${SITE_URL}/brand`,
+    type: 'website',
+    images: ['/brand/poker-reflex-logo-square-512.png'],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Brand Assets | Poker Reflex',
+    description: 'Public Poker Reflex logo assets.',
+  },
 }
 
 export default function BrandPage() {

@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://www.poker-reflex.com'
+export const SITE_URL = 'https://poker-reflex.com'
 
 export const BRAND_ASSETS = {
   logoSvgPath: '/brand/poker-reflex-logo.svg',

@@ -109,14 +109,6 @@ export default function Footer() {
             </li>
             <li>
               <a
-                href="/brand"
-                className="text-textSecondary hover:text-text text-sm transition-colors"
-              >
-                Brand Assets
-              </a>
-            </li>
-            <li>
-              <a
                 href="mailto:contact@poker-reflex.com"
                 className="text-textSecondary hover:text-text text-sm transition-colors"
               >
