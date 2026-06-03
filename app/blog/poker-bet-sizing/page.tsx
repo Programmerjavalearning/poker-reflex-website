@@ -503,7 +503,15 @@ export default function BetSizingArticle() {
             </p>
             <p className="mt-4">
               C-betting too small on wet boards. A $4 bet into a $20 pot on a J-T-8 two-tone
-              board gives every draw the perfect price to call. You're basically handing out free
+              board gives every draw the perfect price to call (use the free{' '}
+              <Link
+                href="/tools/pot-odds-calculator"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                pot odds calculator
+              </Link>{' '}
+              to see exactly what equity they're getting). You're basically handing out free
               cards. Size up to 60-75% when the board is coordinated.
             </p>
             <p className="mt-4">

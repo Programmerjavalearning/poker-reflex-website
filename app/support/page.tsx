@@ -109,7 +109,7 @@ export default function SupportPage() {
 
             <p className="mt-4">
               <strong style={{ color: 'var(--text)' }}>
-                My progress didn&apos;t restore after reinstalling — what should I do?
+                My progress didn&apos;t restore after reinstalling. What should I do?
               </strong>
               <br />
               Cross-device restore requires an account. Sign in with the same email you used

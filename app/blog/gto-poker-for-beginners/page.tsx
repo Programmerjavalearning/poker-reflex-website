@@ -359,8 +359,15 @@ export default function GTOPokerArticle() {
             <p>
               If the pot is $100 and your opponent bets $50, you're risking $50 to win $150. You
               need to win 25% of the time to break even.{' '}
-              <strong style={{ color: 'var(--text)' }}>Pot odds</strong> are the first piece of math
-              every poker player should learn, and they're fundamental to every GTO decision.
+              <Link
+                href="/tools/pot-odds-calculator"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                Pot odds
+              </Link>{' '}
+              are the first piece of math every poker player should learn, and they're fundamental
+              to every GTO decision.
             </p>
 
             {/* H3: Minimum Defense Frequency */}

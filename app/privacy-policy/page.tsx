@@ -89,7 +89,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <p>
               If you create or sign in to an account, Poker Reflex uses Supabase Auth for email
-              magic link sign-in — no password is required. Supabase stores your account email,
+              magic link sign-in. No password is required. Supabase stores your account email,
               account identifier, session metadata, and authentication state.
             </p>
             <p className="mt-3">
@@ -227,16 +227,16 @@ export default function PrivacyPolicyPage() {
             </h2>
             <ul className="mt-3 space-y-2 pl-6 list-disc">
               <li>
-                <strong style={{ color: 'var(--text)' }}>Supabase</strong> — authentication,
+                <strong style={{ color: 'var(--text)' }}>Supabase</strong>: authentication,
                 database storage, Edge Functions, and account deletion.
               </li>
               <li>
-                <strong style={{ color: 'var(--text)' }}>Resend</strong> — transactional support
+                <strong style={{ color: 'var(--text)' }}>Resend</strong>: transactional support
                 email delivery when support email is configured.
               </li>
               <li>
-                <strong style={{ color: 'var(--text)' }}>Apple and Google platform services</strong>{' '}
-                — app distribution, system review prompts, and platform-level purchase services if
+                <strong style={{ color: 'var(--text)' }}>Apple and Google platform services</strong>:{' '}
+                app distribution, system review prompts, and platform-level purchase services if
                 added later.
               </li>
             </ul>
