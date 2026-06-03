@@ -2,10 +2,10 @@
 # Reads INDEXNOW_SECRET from .env.local automatically.
 #
 # Usage:
-#   .\scripts\submit-indexnow.ps1 https://www.poker-reflex.com/blog/your-new-article
+#   .\scripts\submit-indexnow.ps1 https://poker-reflex.com/blog/your-new-article
 #
 # Multiple URLs:
-#   .\scripts\submit-indexnow.ps1 https://www.poker-reflex.com/blog/article1 https://www.poker-reflex.com/blog/article2
+#   .\scripts\submit-indexnow.ps1 https://poker-reflex.com/blog/article1 https://poker-reflex.com/blog/article2
 
 param([Parameter(ValueFromRemainingArguments=$true)][string[]]$urls)
 
@@ -27,7 +27,7 @@ $body = @{ urls = $urls } | ConvertTo-Json
 
 try {
     $response = Invoke-WebRequest `
-        -Uri "https://www.poker-reflex.com/api/indexnow" `
+        -Uri "https://poker-reflex.com/api/indexnow" `
         -Method Post `
         -Headers @{ "x-indexnow-secret" = $secret } `
         -Body $body `

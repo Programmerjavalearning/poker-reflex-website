@@ -84,6 +84,7 @@ export default function EmailCapture() {
                   placeholder="your@email.com"
                   required
                   autoComplete="email"
+                  aria-label="Email address"
                   disabled={status === 'loading'}
                   className="flex-1 px-6 py-4 rounded-xl text-text text-lg placeholder-textSecondary outline-none transition-all duration-200 disabled:opacity-50"
                   style={{

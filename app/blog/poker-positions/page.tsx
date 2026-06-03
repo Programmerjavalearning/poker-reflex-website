@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Poker Positions Explained: UTG to Button',
     description:
       'Every seat at the table explained, and how to use position to win.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 
@@ -41,6 +42,7 @@ const articleSchema = {
     name: 'Poker Reflex',
     logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
+  image: BRAND_ASSETS.squareLogoUrl,
   datePublished: '2026-05-28',
   dateModified: '2026-05-28',
   mainEntityOfPage: {

@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Poker Bankroll Management: The Complete Guide',
     description: 'Practical bankroll rules and a simple system to protect your money.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 
@@ -46,12 +47,52 @@ const articleSchema = {
       url: BRAND_ASSETS.squareLogoUrl,
     },
   },
+  image: BRAND_ASSETS.squareLogoUrl,
   datePublished: '2026-05-18',
   dateModified: '2026-05-18',
   mainEntityOfPage: {
     '@type': 'WebPage',
     '@id': `${SITE_URL}/blog/poker-bankroll-management`,
   },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What is a poker bankroll?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A poker bankroll is money set aside specifically for playing poker, completely separate from your living expenses. It should never include rent, bills, or any funds you need for daily life.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many buy-ins do you need for cash games?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'The standard guideline is 20 to 30 buy-ins for the stake you play. More conservative players keep 40 to 50 buy-ins, especially in tougher games or when playing a higher-variance style.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many buy-ins do you need for poker tournaments?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Tournament players should have at least 100 buy-ins due to higher variance. For large-field MTTs, rebuys, or satellites, 150 to 200 buy-ins is recommended.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'When should you move up in poker stakes?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Move up when you have both the bankroll for the next level and a proven win rate at your current stake. If your bankroll drops below 20 buy-ins for your current level, move down immediately.',
+      },
+    },
+  ],
 }
 
 const PLAY_STORE_URL =
@@ -118,6 +159,10 @@ export default function BankrollManagementArticle() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Header />
       <main id="main-content" className="pt-20" style={{ backgroundColor: 'var(--background)' }}>

@@ -85,7 +85,7 @@ export default function BrandPage() {
             <h2 className="font-heading text-lg font-semibold text-text">Recommended email HTML</h2>
             <div className="mt-4 rounded-md border border-border bg-background p-3">
               <code className="block break-all text-xs leading-5 text-textSecondary">
-                {'<img src="https://www.poker-reflex.com/brand/poker-reflex-logo-email.png" width="160" alt="Poker Reflex" />'}
+                {'<img src="https://poker-reflex.com/brand/poker-reflex-logo-email.png" width="160" alt="Poker Reflex" />'}
               </code>
             </div>
           </div>

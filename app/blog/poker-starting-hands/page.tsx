@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Best Starting Hands in Poker: Complete Chart & Guide',
     description: 'Which hands to play and which to fold, by position.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 
@@ -41,6 +42,7 @@ const articleSchema = {
     name: 'Poker Reflex',
     logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
+  image: BRAND_ASSETS.squareLogoUrl,
   datePublished: '2026-05-26',
   dateModified: '2026-05-26',
   mainEntityOfPage: {

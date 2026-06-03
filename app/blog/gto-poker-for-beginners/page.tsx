@@ -35,6 +35,7 @@ export const metadata: Metadata = {
     title: 'GTO Poker for Beginners: What It Means and How to Start',
     description:
       'What GTO poker really means, why it matters even at low stakes, and a clear step-by-step path to learn it without drowning in solvers.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 
@@ -50,6 +51,7 @@ const articleSchema = {
     name: 'Poker Reflex',
     logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
+  image: BRAND_ASSETS.squareLogoUrl,
   datePublished: '2026-05-29',
   dateModified: '2026-05-29',
   mainEntityOfPage: {

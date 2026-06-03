@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'What Is a 3-Bet in Poker?',
     description:
       'What a 3-bet means, when to do it, and how to size it.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 
@@ -41,6 +42,7 @@ const articleSchema = {
     name: 'Poker Reflex',
     logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
+  image: BRAND_ASSETS.squareLogoUrl,
   datePublished: '2026-05-28',
   dateModified: '2026-05-28',
   mainEntityOfPage: {

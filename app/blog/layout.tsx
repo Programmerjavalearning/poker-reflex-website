@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { SITE_URL } from '@/lib/brand'
+import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 export const metadata: Metadata = {
   title: 'Poker Blog: Strategy, Tips & Training | Poker Reflex',
@@ -14,12 +14,14 @@ export const metadata: Metadata = {
       'Poker strategy articles, bankroll management tips, and preflop training guides.',
     url: `${SITE_URL}/blog`,
     type: 'website',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Poker Blog: Strategy, Tips & Training | Poker Reflex',
     description:
       'Poker strategy articles, bankroll management tips, and preflop training guides.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 

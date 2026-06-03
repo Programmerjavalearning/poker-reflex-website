@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     title: 'Poker Bet Sizing: How Much Should You Bet?',
     description:
       'Simple bet sizing rules with real examples.',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
 
@@ -41,6 +42,7 @@ const articleSchema = {
     name: 'Poker Reflex',
     logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
+  image: BRAND_ASSETS.squareLogoUrl,
   datePublished: '2026-05-30',
   dateModified: '2026-05-30',
   mainEntityOfPage: {

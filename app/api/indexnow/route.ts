@@ -3,8 +3,8 @@ import { SITE_URL } from '@/lib/brand'
 
 const INDEXNOW_KEY = '46f36b2948104bc49b915173f6e23ae5'
 const INDEXNOW_KEY_LOCATION = `${SITE_URL}/46f36b2948104bc49b915173f6e23ae5.txt`
-const HOST = 'www.poker-reflex.com'
-const ALLOWED_HOSTS = ['poker-reflex.com', HOST]
+const HOST = 'poker-reflex.com'
+const ALLOWED_HOSTS = [HOST]
 
 export async function POST(request: NextRequest) {
   try {

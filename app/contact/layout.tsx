@@ -16,6 +16,13 @@ export const metadata: Metadata = {
     type: 'website',
     images: [BRAND_ASSETS.squareLogoUrl],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Poker Reflex',
+    description:
+      'Partnerships, creators, press, or general inquiries.',
+    images: [BRAND_ASSETS.squareLogoUrl],
+  },
   robots: { index: true, follow: true },
 }
 
