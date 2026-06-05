@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect, useCallback } from 'react'
 import { ChevronDown } from 'lucide-react'
+import QRCodeBlock from './QRCodeBlock'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
 
@@ -91,7 +92,7 @@ export default function Hero() {
 
           {/* CTAs */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-4 mb-6"
+            className="flex flex-col sm:flex-row gap-4 mb-6 md:hidden"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: 'spring', stiffness: 300, damping: 30, delay: 0.4 }}
@@ -120,6 +121,8 @@ export default function Hero() {
               Download on App Store
             </a>
           </motion.div>
+
+          <QRCodeBlock variant="hero" />
 
           {/* Social proof */}
           <motion.div

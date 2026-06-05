@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import QRCodeBlock from './QRCodeBlock'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
 
@@ -26,7 +27,7 @@ export default function DownloadCTA() {
             Join players building GTO reflexes with Poker Reflex. Free to download, start in 30 seconds.
           </p>
 
-          <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-6">
+          <div className="relative flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center mb-6 md:hidden">
             <motion.a
               href={PLAY_STORE_URL}
               target="_blank"
@@ -54,6 +55,10 @@ export default function DownloadCTA() {
               </svg>
               Download on App Store
             </motion.a>
+          </div>
+
+          <div className="hidden md:flex justify-center mb-6">
+            <QRCodeBlock variant="finalCta" />
           </div>
 
           <p className="relative text-gray-400 text-sm">
