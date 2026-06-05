@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import QRCodeBlock from '@/components/QRCodeBlock'
 import RangeGrid from '@/components/RangeGrid'
 import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
@@ -112,7 +113,7 @@ function CTABox({ headline, text }: { headline: string; text: string }) {
       <p className="mb-6 leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
         {text}
       </p>
-      <div className="flex flex-col sm:flex-row gap-3">
+      <div className="flex flex-col sm:flex-row gap-3 md:hidden">
         <a
           href={PLAY_STORE_URL}
           target="_blank"
@@ -137,6 +138,9 @@ function CTABox({ headline, text }: { headline: string; text: string }) {
           </svg>
           Download on App Store
         </a>
+      </div>
+      <div className="hidden md:flex justify-center">
+        <QRCodeBlock variant="finalCta" />
       </div>
     </div>
   )
