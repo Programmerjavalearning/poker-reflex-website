@@ -595,8 +595,8 @@ export default function GTOPokerArticle() {
               Trainer apps work differently. Instead of analyzing one spot for ten minutes, you see
               hundreds of spots in a session, swipe your decision, and learn from instant feedback.
               Pattern recognition builds faster this way. Poker Reflex covers preflop opens,
-              3-bets, 4-bets, and all-in decisions across stack depths, with custom editable
-              ranges, ELO ratings, and session stats. Five minutes on the bus, you've trained
+              3-bets, 4-bets, and all-in decisions across stack depths, with ELO ratings,
+              session stats, and hand history. Five minutes on the bus, you've trained
               50 hands.
             </p>
             <p className="mt-4">

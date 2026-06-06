@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Resend } from 'resend';
 import { BRAND_ASSETS } from '@/lib/brand';
+import { rateLimit, getClientIp } from '@/lib/rate-limit';
 
 function getResendClient(): Resend {
   const apiKey = process.env.RESEND_API_KEY;
@@ -14,6 +15,16 @@ function getResendClient(): Resend {
 
 export async function POST(request: NextRequest) {
   try {
+    // Rate limit: 5 requests per 10 minutes per IP (best-effort, in-memory)
+    const ip = getClientIp(request);
+    const limit = rateLimit('subscribe:' + ip, 5, 10 * 60 * 1000);
+    if (!limit.ok) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please try again later.' },
+        { status: 429, headers: { 'Retry-After': String(limit.retryAfter) } }
+      );
+    }
+
     const { email } = await request.json();
 
     // Basic email validation

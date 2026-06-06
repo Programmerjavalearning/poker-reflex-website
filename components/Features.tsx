@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Layers, Edit3, BarChart3, Award, History, Flame } from 'lucide-react'
+import { Layers, Users, BarChart3, Award, History, Flame } from 'lucide-react'
 import AnimatedCard from './AnimatedCard'
 
 const features = [
@@ -11,9 +11,9 @@ const features = [
     description: 'Train open, 3-bet, 4-bet, and all-in decisions. Master every preflop situation from facing raises to complex multi-street scenarios.',
   },
   {
-    icon: Edit3,
-    title: 'Custom Editable Ranges',
-    description: 'Edit and train YOUR strategy, not someone else\'s. Fully customizable ranges for cash games and tournaments.',
+    icon: Users,
+    title: '6-Max & 9-Max Support',
+    description: 'Train both formats with their own ranges. Switch between short-handed cash tables and full ring spots in one tap to match the games you actually play.',
   },
   {
     icon: BarChart3,

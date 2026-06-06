@@ -43,3 +43,7 @@ Thumbs.db
 
 # Temporary prompt 
 prompt.md
+
+# Claude Code context (private, do not commit)
+CLAUDE.md
+CLAUDE.local.md

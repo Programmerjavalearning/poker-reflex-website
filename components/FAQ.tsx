@@ -18,8 +18,8 @@ const faqs = [
     answer: 'All 6 preflop positions: UTG, MP, CO, BTN, SB, and BB. Each position has its own GTO opening range, and you can practice them individually or all together. Cash games and tournament spots included.',
   },
   {
-    question: 'Can I customize the ranges?',
-    answer: 'Yes. You can fully edit the ranges for every position and create your own custom strategy. This is perfect if you play a specific style, target specific stakes, or want to train a solver-approved range you\'ve built yourself.',
+    question: 'Can I track my progress over time?',
+    answer: 'Yes. Your ELO rating, accuracy stats, and full hand history are saved between sessions. You can see how your decisions improve over weeks and months, and review any past hand to study the spots you got wrong.',
   },
   {
     question: 'How does the ELO rating work?',
@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     question: 'Is this for beginners or advanced players?',
-    answer: 'Both. Beginners can start with ready-to-use GTO ranges and build solid fundamentals from day one. Intermediate players can customize ranges, focus on specific positions, and use the ELO system to identify and fix leaks in their game.',
+    answer: 'Both. Beginners can start with ready-to-use GTO ranges and build solid fundamentals from day one. Intermediate players can focus on specific positions, drill tougher 3-bet and 4-bet spots, and use the ELO system to identify and fix leaks in their game.',
   },
   {
     question: 'How long does it take to see improvement?',

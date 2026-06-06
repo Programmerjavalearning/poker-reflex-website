@@ -9,8 +9,6 @@ const screenshots = [
   { src: '/screenshots/screenshot-1.png', alt: 'Poker Reflex - Main training interface with swipe gestures' },
   { src: '/screenshots/screenshot-2.png', alt: 'Poker Reflex - Hand position selection screen' },
   { src: '/screenshots/screenshot-3.png', alt: 'Poker Reflex - ELO rating and progress tracking' },
-  { src: '/screenshots/screenshot-4.png', alt: 'Poker Reflex - Custom range editor' },
-  { src: '/screenshots/screenshot-5.png', alt: 'Poker Reflex - Hand history review' },
 ]
 
 export default function Screenshots() {
