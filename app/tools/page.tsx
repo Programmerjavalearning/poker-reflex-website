@@ -39,13 +39,13 @@ const tools = [
     badgeColor: 'green' as const,
   },
   {
-    href: '#',
+    href: '/tools/range-visualizer',
     icon: Grid3X3,
     title: 'Range Visualizer',
-    description: 'Visualize hand ranges on a 13x13 grid. Coming soon.',
-    badge: 'Coming soon',
-    badgeColor: 'gold' as const,
-    disabled: true,
+    description:
+      'Explore preflop hand ranges on an interactive 13x13 grid. Load ranges by position, switch between 6-max and 9-max, toggle opens and 3-bets, or type your own.',
+    badge: 'Available now',
+    badgeColor: 'green' as const,
   },
   {
     href: '#',
