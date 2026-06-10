@@ -54,6 +54,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/preflop-poker-mistakes`,
+      lastModified: new Date('2026-06-10'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/tools`,
       lastModified: new Date('2026-06-03'),
       changeFrequency: 'monthly',

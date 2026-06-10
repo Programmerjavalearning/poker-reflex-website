@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'preflop-poker-mistakes',
+    title: 'Common Preflop Poker Mistakes: 14 Leaks That Cost You Money',
+    excerpt:
+      'The 14 most common preflop poker mistakes, ranked by cost, with real hands and a concrete fix for each leak.',
+    category: 'Preflop',
+    readTime: '15 min read',
+    date: '2026-06-10',
+  },
+  {
     slug: 'poker-bet-sizing',
     title: 'Poker Bet Sizing: How Much Should You Actually Bet?',
     excerpt:
