@@ -282,11 +282,14 @@ export default function PotOddsCalculator() {
     >
       <div className="p-6 md:p-8">
         <h2
-          className="font-heading font-bold text-xl md:text-2xl mb-6"
+          className="font-heading font-bold text-xl md:text-2xl mb-1"
           style={{ color: 'var(--text)' }}
         >
           Pot Odds Calculator
         </h2>
+        <p className="text-sm mb-6" style={{ color: 'var(--text-secondary)' }}>
+          Sample values are filled in as an example. Replace them with your own numbers.
+        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
           {/* Pot size */}
@@ -392,6 +395,8 @@ export default function PotOddsCalculator() {
         <div
           className="mt-6 pt-6"
           style={{ borderTop: '1px solid var(--border)' }}
+          role="status"
+          aria-live="polite"
         >
           <h3
             className="font-heading font-semibold text-base mb-5"

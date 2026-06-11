@@ -308,14 +308,14 @@ export default function PotOddsCalculatorPage() {
                   </thead>
                   <tbody>
                     {[
-                      { size: '1/4 pot', odds: '1:5', equity: '16.7%' },
-                      { size: '1/3 pot', odds: '1:4', equity: '20%' },
-                      { size: '1/2 pot', odds: '1:3', equity: '25%' },
-                      { size: '2/3 pot', odds: '1:2.5', equity: '28.6%' },
-                      { size: '3/4 pot', odds: '1:2.33', equity: '30%' },
-                      { size: 'Pot-sized', odds: '1:2', equity: '33.3%' },
-                      { size: '1.5x pot', odds: '1:1.67', equity: '37.5%' },
-                      { size: '2x pot (overbet)', odds: '1:1.5', equity: '40%' },
+                      { size: '1/4 pot', odds: '5:1', equity: '16.7%' },
+                      { size: '1/3 pot', odds: '4:1', equity: '20%' },
+                      { size: '1/2 pot', odds: '3:1', equity: '25%' },
+                      { size: '2/3 pot', odds: '2.5:1', equity: '28.6%' },
+                      { size: '3/4 pot', odds: '2.33:1', equity: '30%' },
+                      { size: 'Pot-sized', odds: '2:1', equity: '33.3%' },
+                      { size: '1.5x pot', odds: '1.67:1', equity: '37.5%' },
+                      { size: '2x pot (overbet)', odds: '1.5:1', equity: '40%' },
                     ].map((row, i) => (
                       <tr
                         key={row.size}

@@ -140,6 +140,60 @@ export function countCombos(hands: Set<string>): { combos: number; percent: numb
   return { combos, percent: (combos / 1326) * 100 }
 }
 
+// Group a sorted ascending list of indices into consecutive [start, end] runs.
+function toRuns(indices: number[]): Array<[number, number]> {
+  const out: Array<[number, number]> = []
+  let start = -1
+  let prev = -2
+  for (const idx of indices) {
+    if (idx === prev + 1) {
+      prev = idx
+    } else {
+      if (start >= 0) out.push([start, prev])
+      start = idx
+      prev = idx
+    }
+  }
+  if (start >= 0) out.push([start, prev])
+  return out
+}
+
+// Convert a set of hand labels into compact poker notation (the inverse of
+// parseRangeNotation). Pairs come first, then suited by high card, then offsuit.
+// Consecutive groups collapse to "+" (reaches the top) or "X-Y" ranges.
+export function formatRange(hands: Set<string>): string {
+  if (hands.size === 0) return ''
+  const parts: string[] = []
+
+  // Pairs (index 0 = AA ... 12 = 22)
+  const pairIdx: number[] = []
+  for (let i = 0; i < 13; i++) {
+    if (hands.has(`${RANKS[i]}${RANKS[i]}`)) pairIdx.push(i)
+  }
+  for (const [lo, hi] of toRuns(pairIdx)) {
+    if (lo === hi) parts.push(`${RANKS[lo]}${RANKS[lo]}`)
+    else if (lo === 0) parts.push(`${RANKS[hi]}${RANKS[hi]}+`)
+    else parts.push(`${RANKS[lo]}${RANKS[lo]}-${RANKS[hi]}${RANKS[hi]}`)
+  }
+
+  // Suited then offsuit, by high card
+  for (const suit of ['s', 'o'] as const) {
+    for (let hi = 0; hi < 12; hi++) {
+      const kIdx: number[] = []
+      for (let k = hi + 1; k < 13; k++) {
+        if (hands.has(`${RANKS[hi]}${RANKS[k]}${suit}`)) kIdx.push(k)
+      }
+      for (const [klo, khi] of toRuns(kIdx)) {
+        if (klo === khi) parts.push(`${RANKS[hi]}${RANKS[klo]}${suit}`)
+        else if (klo === hi + 1) parts.push(`${RANKS[hi]}${RANKS[khi]}${suit}+`)
+        else parts.push(`${RANKS[hi]}${RANKS[klo]}${suit}-${RANKS[hi]}${RANKS[khi]}${suit}`)
+      }
+    }
+  }
+
+  return parts.join(', ')
+}
+
 // ---------------------------------------------------------------------------
 // Reference ranges (standard ~100bb cash, rounded for learning)
 // ---------------------------------------------------------------------------
