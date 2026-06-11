@@ -49,7 +49,7 @@ function ToggleButton({
       type="button"
       onClick={onClick}
       aria-pressed={active}
-      className="px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors"
+      className="px-3 py-2 rounded-lg text-sm font-semibold transition-colors"
       style={{
         backgroundColor: active ? 'rgba(74, 222, 128, 0.15)' : 'var(--background)',
         color: active ? 'var(--green)' : 'var(--text-secondary)',
@@ -237,7 +237,7 @@ export default function RangeVisualizer() {
 
   return (
     <div
-      className="rounded-2xl border p-3 md:p-7 glow-green"
+      className="rounded-2xl border p-5 md:p-7 glow-green"
       style={{ backgroundColor: 'var(--surface)', borderColor: 'rgba(74, 222, 128, 0.35)' }}
     >
       <h2
@@ -304,7 +304,7 @@ export default function RangeVisualizer() {
                 aspectRatio: '1',
                 backgroundColor: active ? 'rgba(74, 222, 128, 0.85)' : '#161c25',
                 color: active ? '#0d1117' : '#6b7280',
-                fontSize: 'clamp(8px, 3vw, 11px)',
+                fontSize: 'clamp(7px, 2.2vw, 11px)',
                 fontWeight: active ? 700 : 500,
                 lineHeight: 1,
                 border: '1px solid #30363d',
