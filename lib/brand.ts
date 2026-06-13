@@ -1,5 +1,11 @@
 export const SITE_URL = 'https://poker-reflex.com'
 
+// App store links. The App Store URL uses the universal id form so it
+// auto-localizes to each visitor's storefront; the Play URL localizes too.
+export const APP_STORE_URL = 'https://apps.apple.com/app/id6761329446'
+export const PLAY_STORE_URL =
+  'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
+
 export const BRAND_ASSETS = {
   logoSvgPath: '/brand/poker-reflex-logo.svg',
   emailLogoPath: '/brand/poker-reflex-logo-email.png',
