@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calculator, TrendingUp, Grid3X3 } from 'lucide-react'
+import { Calculator, TrendingUp, Grid3X3, type LucideIcon } from 'lucide-react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
@@ -28,7 +28,17 @@ export const metadata: Metadata = {
   },
 }
 
-const tools = [
+type Tool = {
+  href: string
+  icon: LucideIcon
+  title: string
+  description: string
+  badge: string
+  badgeColor: 'green' | 'gold'
+  disabled?: boolean
+}
+
+const tools: Tool[] = [
   {
     href: '/tools/pot-odds-calculator',
     icon: Calculator,
@@ -48,13 +58,13 @@ const tools = [
     badgeColor: 'green' as const,
   },
   {
-    href: '#',
+    href: '/tools/equity-calculator',
     icon: TrendingUp,
     title: 'Equity Calculator',
-    description: 'Compare hand vs hand or hand vs range equity. Coming soon.',
-    badge: 'Coming soon',
-    badgeColor: 'gold' as const,
-    disabled: true,
+    description:
+      'Pick two hands and an optional board to see the win percentages instantly. Exact on the flop, turn, and river, simulated preflop.',
+    badge: 'Available now',
+    badgeColor: 'green' as const,
   },
 ]
 

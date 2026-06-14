@@ -78,6 +78,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/tools/equity-calculator`,
+      lastModified: new Date('2026-06-14'),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
