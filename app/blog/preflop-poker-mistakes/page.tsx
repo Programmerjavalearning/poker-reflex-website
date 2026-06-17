@@ -442,7 +442,9 @@ export default function PreflopMistakesArticle() {
               weren&apos;t sure. If you&apos;re limping because you couldn&apos;t decide whether to play
               the hand, you&apos;re making the mistake. Understanding{' '}
               <GL href="/blog/poker-positions">why position is powerful and how to use it</GL> makes it
-              obvious when a limp is genuinely okay.
+              obvious when a limp is genuinely okay. For the full breakdown, with the EV math and the few
+              spots where a limp is genuinely fine, see{' '}
+              <GL href="/blog/open-limping-poker">open limping in poker</GL>.
             </P>
 
             <H2>Mistake 3: Ignoring Position</H2>

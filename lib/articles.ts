@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'open-limping-poker',
+    title: "Open Limping in Poker: Why It's a Leak (and When It's Not)",
+    excerpt:
+      'Why open limping is usually a preflop leak, the EV and rake math behind it, and the few spots where limping is actually correct.',
+    category: 'Preflop',
+    readTime: '11 min read',
+    date: '2026-06-17',
+  },
+  {
     slug: 'preflop-poker-mistakes',
     title: 'Common Preflop Poker Mistakes: 14 Leaks That Cost You Money',
     excerpt:
