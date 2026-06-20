@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'poker-equity-explained',
+    title: 'Poker Equity Explained: How to Read Your Win %',
+    excerpt:
+      'What poker equity means, how to estimate it fast with the Rule of 2 and 4, equity vs pot odds, fold equity, and the matchups to memorize.',
+    category: 'Fundamentals',
+    readTime: '11 min read',
+    date: '2026-06-20',
+  },
+  {
     slug: 'open-limping-poker',
     title: "Open Limping in Poker: Why It's a Leak (and When It's Not)",
     excerpt:

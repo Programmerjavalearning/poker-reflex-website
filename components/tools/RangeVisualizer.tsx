@@ -303,7 +303,7 @@ export default function RangeVisualizer() {
               style={{
                 aspectRatio: '1',
                 backgroundColor: active ? 'rgba(74, 222, 128, 0.85)' : '#161c25',
-                color: active ? '#0d1117' : '#6b7280',
+                color: active ? '#0d1117' : '#9ca3af',
                 fontSize: 'clamp(7px, 2.2vw, 11px)',
                 fontWeight: active ? 700 : 500,
                 lineHeight: 1,

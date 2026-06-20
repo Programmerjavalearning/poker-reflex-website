@@ -69,10 +69,10 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'What does equity mean in poker?',
+      name: 'How do I use this equity calculator?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Equity is the share of the pot a hand is worth right now, expressed as the percentage of the time it would win if the hand were played to showdown against the other hand (or hands). If your hand has 60% equity, it wins 60 times out of 100 on average. Ties are usually split, counting as half a win for each player.',
+        text: 'Tap a card slot, then tap a card below to fill it. Pick two cards for each player, leave the board empty for a preflop all-in or add a flop, turn, or river, and the win percentages update instantly. The Random hands button fills in a fresh matchup so you can explore fast.',
       },
     },
     {
@@ -85,10 +85,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'What is a coin flip or race in poker?',
+      name: 'Does the calculator work on the flop, turn, and river?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'A coin flip (or race) is a roughly 50/50 matchup. The classic example is a pair against two higher cards, like 22 against AK. The pair is a tiny favorite at about 53%, because it is already made, while AK has to pair up or make a straight or flush. People call it a flip because the equities are so close that the result feels like chance.',
+        text: 'Yes. With a board on screen the calculator enumerates every remaining runout, so the result is exact. Preflop, with no board, it runs a fast Monte Carlo simulation. You can add or remove board cards at any time and the equity updates instantly.',
       },
     },
     {
@@ -316,7 +316,13 @@ export default function EquityCalculatorPage() {
               <Link href="/tools/pot-odds-calculator" style={{ color: 'var(--green)' }} className="hover:opacity-80 transition-opacity underline underline-offset-2">
                 pot odds
               </Link>
-              , and it tells you which preflop hands are actually ahead when the money goes in.
+              , and it tells you which preflop hands are actually ahead when the money goes in. For a
+              full walkthrough, including how to estimate equity in your head with the Rule of 2 and 4
+              and how it compares to pot odds, see our guide to{' '}
+              <Link href="/blog/poker-equity-explained" style={{ color: 'var(--green)' }} className="hover:opacity-80 transition-opacity underline underline-offset-2">
+                poker equity explained
+              </Link>
+              .
             </p>
 
             <H2>How to use this equity calculator</H2>
@@ -395,16 +401,16 @@ export default function EquityCalculatorPage() {
             <div className="space-y-8 mt-6">
               {[
                 {
-                  q: 'What does equity mean in poker?',
-                  a: 'Equity is the share of the pot your hand is worth right now, measured as how often it would win at showdown against the other hand. 60% equity means it wins 60 times out of 100. Ties are split, counting as half a win for each player.',
+                  q: 'How do I use this equity calculator?',
+                  a: 'Tap a card slot, then tap a card to fill it. Pick two cards for each player, leave the board empty for a preflop all-in or add a flop, turn, or river, and the percentages update instantly. Random hands fills a fresh matchup.',
                 },
                 {
                   q: 'How is poker equity calculated?',
                   a: 'You run out every possible board, play each hand to showdown, and count the wins. Postflop there are few enough runouts to enumerate exactly. Preflop there are over 1.7 million, so calculators sample a large number of random boards (Monte Carlo) and measure the win rate.',
                 },
                 {
-                  q: 'What is a coin flip or race?',
-                  a: 'A roughly 50/50 matchup, usually a pair against two higher cards like 22 against AK. The pair is a small favorite around 53% because it is already made while the overcards still have to improve.',
+                  q: 'Does the calculator work on the flop, turn, and river?',
+                  a: 'Yes. With a board on screen it enumerates every remaining runout for an exact result. Preflop it runs a fast simulation. Add or remove board cards any time and the equity updates instantly.',
                 },
                 {
                   q: 'Is AK better than a pair before the flop?',

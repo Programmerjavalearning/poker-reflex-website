@@ -1,5 +1,3 @@
-'use client'
-
 const RANKS = ['A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2'] as const
 
 function getHandLabel(row: number, col: number): string {
@@ -54,7 +52,7 @@ export default function RangeGrid({ title, caption, ariaLabel, inRangeHands }: R
               style={{
                 aspectRatio: '1',
                 backgroundColor: active ? 'rgba(74, 222, 128, 0.85)' : '#161c25',
-                color: active ? '#0d1117' : '#6b7280',
+                color: active ? '#0d1117' : '#9ca3af',
                 fontSize: 'clamp(7px, 2.2vw, 11px)',
                 fontWeight: active ? 700 : 500,
                 lineHeight: 1,

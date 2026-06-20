@@ -34,16 +34,11 @@ const testimonials = [
 function TestimonialCard({ t }: { t: typeof testimonials[number] }) {
   return (
     <motion.div
-      className="relative rounded-3xl p-8 overflow-hidden flex-shrink-0"
+      className="relative rounded-3xl p-8 overflow-hidden flex-shrink-0 border border-[#30363d] transition-[box-shadow,border-color] duration-200 will-change-transform hover:shadow-[0_16px_40px_rgba(74,222,128,0.12)] hover:border-[rgba(74,222,128,0.3)]"
       style={{
         background: '#161c25',
-        border: '1px solid #30363d',
       }}
-      whileHover={{
-        y: -6,
-        boxShadow: '0 16px 40px rgba(74, 222, 128, 0.12)',
-        borderColor: 'rgba(74, 222, 128, 0.3)',
-      }}
+      whileHover={{ y: -6 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
     >
       {/* Left accent bar */}
