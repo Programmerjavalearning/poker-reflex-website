@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Calculator, TrendingUp, Grid3X3, type LucideIcon } from 'lucide-react'
+import { Calculator, TrendingUp, Grid3X3, Zap, type LucideIcon } from 'lucide-react'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
@@ -8,13 +8,13 @@ import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 export const metadata: Metadata = {
   title: 'Free Poker Tools | Poker Reflex',
   description:
-    'Free tools to help you play smarter poker. Pot odds calculator and more, no signup needed.',
+    'Free tools to help you play smarter poker: calculators and trainers for pot odds, ranges, equity, and push/fold. No signup needed.',
   alternates: {
     canonical: `${SITE_URL}/tools`,
   },
   openGraph: {
     title: 'Free Poker Tools | Poker Reflex',
-    description: 'Free tools to help you play smarter poker. Pot odds calculator and more, no signup needed.',
+    description: 'Free tools to help you play smarter poker: calculators and trainers for pot odds, ranges, equity, and push/fold. No signup needed.',
     url: `${SITE_URL}/tools`,
     siteName: 'Poker Reflex',
     type: 'website',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Free Poker Tools | Poker Reflex',
-    description: 'Free tools to help you play smarter poker. Pot odds calculator and more, no signup needed.',
+    description: 'Free tools to help you play smarter poker: calculators and trainers for pot odds, ranges, equity, and push/fold. No signup needed.',
     images: [BRAND_ASSETS.squareLogoUrl],
   },
 }
@@ -63,6 +63,15 @@ const tools: Tool[] = [
     title: 'Equity Calculator',
     description:
       'Pick two hands and an optional board to see the win percentages instantly. Exact on the flop, turn, and river, simulated preflop.',
+    badge: 'Available now',
+    badgeColor: 'green' as const,
+  },
+  {
+    href: '/tools/push-fold-chart',
+    icon: Zap,
+    title: 'Push or Fold Chart',
+    description:
+      'See the math-perfect short-stack shove ranges by position and stack depth, from 5 to 15 big blinds. Tap any hand for an instant jam or fold verdict.',
     badge: 'Available now',
     badgeColor: 'green' as const,
   },
