@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'poker-4-bet',
+    title: 'What Is a 4-Bet in Poker? When to 4-Bet, Sizing & Bluffs',
+    excerpt:
+      'A 4-bet is the reraise of a 3-bet. When to 4-bet for value, the blocker hands that make the best bluffs, sizing, and what to do when you face one.',
+    category: 'Preflop',
+    readTime: '10 min read',
+    date: '2026-06-27',
+  },
+  {
     slug: 'poker-equity-explained',
     title: 'Poker Equity Explained: How to Read Your Win %',
     excerpt:
