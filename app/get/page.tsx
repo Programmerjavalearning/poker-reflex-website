@@ -46,17 +46,56 @@ function withSource(base: string, store: 'ios' | 'android', src?: string) {
   return `${base}${sep}ct=${encodeURIComponent(clean)}`
 }
 
-export default function GetPage({
+// Best-effort click logging to Supabase. Never blocks or breaks the redirect:
+// missing env, errors, or slowness are all swallowed and we send the user on.
+async function logClick(src: string, platform: 'ios' | 'android' | 'other') {
+  const url = process.env.SUPABASE_URL
+  const key = process.env.SUPABASE_ANON_KEY
+  if (!url || !key) return
+
+  const endpoint = `${url.replace(/\/+$/, '')}/rest/v1/link_clicks`
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), 1500)
+  try {
+    await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        apikey: key,
+        Authorization: `Bearer ${key}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify({ src, platform }),
+      signal: controller.signal,
+      cache: 'no-store',
+    })
+  } catch {
+    // Tracking is best-effort; never let it affect the redirect.
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
+export default async function GetPage({
   searchParams,
 }: {
   searchParams: { src?: string }
 }) {
   const ua = headers().get('user-agent') || ''
   const src = typeof searchParams?.src === 'string' ? searchParams.src : undefined
+  const isBot = BOT_UA.test(ua)
+  const isIOS = /iPhone|iPad|iPod/i.test(ua)
+  const isAndroid = /Android/i.test(ua)
 
-  if (!BOT_UA.test(ua)) {
-    if (/iPhone|iPad|iPod/i.test(ua)) redirect(withSource(APP_STORE_URL, 'ios', src))
-    if (/Android/i.test(ua)) redirect(withSource(PLAY_STORE_URL, 'android', src))
+  // Log the click (tagged, non-bot visits only) before sending the user off.
+  const cleanSrc = src?.replace(/[^a-zA-Z0-9_-]/g, '').slice(0, 40)
+  if (cleanSrc && !isBot) {
+    await logClick(cleanSrc, isIOS ? 'ios' : isAndroid ? 'android' : 'other')
+  }
+
+  if (!isBot) {
+    if (isIOS) redirect(withSource(APP_STORE_URL, 'ios', src))
+    if (isAndroid) redirect(withSource(PLAY_STORE_URL, 'android', src))
   }
 
   const playHref = withSource(PLAY_STORE_URL, 'android', src)
