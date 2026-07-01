@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'poker-hand-notation',
+    title: 'Poker Hand Notation Explained: AKs, AKo, 22+, ATs+',
+    excerpt:
+      'What AKs, AKo, 22+, and ATs+ actually mean. Decode suited, offsuit, the plus sign, and range shorthand, with a simple 13x13 grid you can read at a glance.',
+    category: 'Fundamentals',
+    readTime: '9 min read',
+    date: '2026-07-01',
+  },
+  {
     slug: 'poker-4-bet',
     title: 'What Is a 4-Bet in Poker? When to 4-Bet, Sizing & Bluffs',
     excerpt:

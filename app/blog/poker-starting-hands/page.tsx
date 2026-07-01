@@ -222,7 +222,15 @@ export default function PokerStartingHandsArticle() {
               A quick note on notation, because it comes up constantly. AKs means ace-king suited
               (both cards share the same suit). AKo means ace-king offsuit. 88 means pocket eights,
               a pair. You'll see this shorthand throughout this guide and in any serious discussion
-              of poker strategy.
+              of poker strategy. If it ever trips you up, our{' '}
+              <Link
+                href="/blog/poker-hand-notation"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                full guide to poker hand notation
+              </Link>{' '}
+              decodes AKs, AKo, 22+, ATs+ and the whole 13x13 grid.
             </p>
 
             {/* H2: Premium Hands */}

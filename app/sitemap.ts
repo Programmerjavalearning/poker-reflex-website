@@ -72,6 +72,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/poker-hand-notation`,
+      lastModified: new Date('2026-07-01'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/poker-4-bet`,
       lastModified: new Date('2026-06-27'),
       changeFrequency: 'monthly',
