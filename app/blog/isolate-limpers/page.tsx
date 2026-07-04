@@ -42,8 +42,8 @@ const articleSchema = {
     logo: { '@type': 'ImageObject', url: BRAND_ASSETS.squareLogoUrl },
   },
   image: BRAND_ASSETS.squareLogoUrl,
-  datePublished: '2026-07-05',
-  dateModified: '2026-07-05',
+  datePublished: '2026-07-04',
+  dateModified: '2026-07-04',
   mainEntityOfPage: { '@type': 'WebPage', '@id': `${SITE_URL}/blog/isolate-limpers` },
 }
 
@@ -252,7 +252,7 @@ export default function IsolateLimpersArticle() {
           <div className="flex items-center gap-4 mb-10 text-sm" style={{ color: 'var(--text-secondary)' }}>
             <span>By Poker Reflex</span>
             <span>·</span>
-            <span>July 5, 2026</span>
+            <span>July 4, 2026</span>
             <span>·</span>
             <span>10 min read</span>
           </div>

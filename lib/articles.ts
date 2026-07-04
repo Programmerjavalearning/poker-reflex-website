@@ -17,7 +17,7 @@ export const articles: Article[] = [
       'How to punish limpers with the isolation raise: the right sizing (your open plus 1bb per limper), which hands to use by position, and when to skip it.',
     category: 'Preflop',
     readTime: '10 min read',
-    date: '2026-07-05',
+    date: '2026-07-04',
   },
   {
     slug: 'poker-hand-notation',

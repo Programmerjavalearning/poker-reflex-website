@@ -7,13 +7,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date('2026-07-05'),
+      lastModified: new Date('2026-07-04'),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-07-05'),
+      lastModified: new Date('2026-07-04'),
       changeFrequency: 'weekly',
       priority: 0.8,
     },
@@ -73,7 +73,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog/isolate-limpers`,
-      lastModified: new Date('2026-07-05'),
+      lastModified: new Date('2026-07-04'),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
