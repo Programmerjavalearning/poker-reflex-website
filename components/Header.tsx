@@ -9,7 +9,7 @@ import { BRAND_ASSETS } from '@/lib/brand'
 import QRModal from './QRModal'
 
 const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
-const APP_STORE_URL = 'https://apps.apple.com/us/app/poker-reflex/id6761329446'
+const APP_STORE_URL = 'https://apps.apple.com/app/id6761329446'
 
 function DownloadButton() {
   const [isQrOpen, setIsQrOpen] = useState(false)

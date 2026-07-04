@@ -123,7 +123,7 @@ const faqSchema = {
 
 const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
-const APP_STORE_URL = 'https://apps.apple.com/us/app/poker-reflex/id6761329446'
+const APP_STORE_URL = 'https://apps.apple.com/app/id6761329446'
 
 const btnHands = Array.from(
   parseRangeNotation(RANGES['6max'].open.find((r) => r.position === 'BTN')!.notation)
@@ -759,7 +759,10 @@ export default function OpenLimpingArticle() {
               $1/$2 you&apos;d make it roughly $12 to $14, and a bit more in position. The rule: speculative
               hand that wants a crowd, over-limp; strong hand that wants the limpers heads-up and paying, raise
               to isolate. And with true premiums, always raise, because limping aces into a four-way pot is the
-              trap you set for yourself. If you&apos;re unsure how big to make that iso-raise, the logic is in{' '}
+              trap you set for yourself. For the full iso-raise playbook, the exact sizing, the hands to punish
+              limpers with by position, and when to skip it, see our guide to{' '}
+              <GL href="/blog/isolate-limpers">isolating limpers</GL>. If you&apos;re unsure how big to make that
+              iso-raise, the logic is in{' '}
               <GL href="/blog/poker-bet-sizing">correct preflop bet sizing</GL>, and choosing to raise over limp
               ties straight into{' '}
               <GL href="/blog/what-is-a-3-bet-in-poker">raising and 3-betting instead of limping</GL>.

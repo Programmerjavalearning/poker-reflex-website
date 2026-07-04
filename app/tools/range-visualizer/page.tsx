@@ -163,7 +163,7 @@ const breadcrumbSchema = {
 
 const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
-const APP_STORE_URL = 'https://apps.apple.com/us/app/poker-reflex/id6761329446'
+const APP_STORE_URL = 'https://apps.apple.com/app/id6761329446'
 
 const utgHands = Array.from(
   parseRangeNotation(RANGES['6max'].open.find((r) => r.position === 'UTG')!.notation)

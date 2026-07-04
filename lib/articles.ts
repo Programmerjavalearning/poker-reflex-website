@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'isolate-limpers',
+    title: 'How to Isolate Limpers in Poker (Sizing and Ranges)',
+    excerpt:
+      'How to punish limpers with the isolation raise: the right sizing (your open plus 1bb per limper), which hands to use by position, and when to skip it.',
+    category: 'Preflop',
+    readTime: '10 min read',
+    date: '2026-07-05',
+  },
+  {
     slug: 'poker-hand-notation',
     title: 'Poker Hand Notation Explained: AKs, AKo, 22+, ATs+',
     excerpt:

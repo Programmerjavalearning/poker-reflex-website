@@ -541,7 +541,7 @@ export default function FourBetArticle() {
             {/* Putting it into practice */}
             <H2>Putting It Into Practice</H2>
             <p>
-              The 4-bet is rare, but it is one of the highest-leverage decisions in preflop poker. Get it
+              The 4-bet is rare, but it is one of the highest-impact decisions in preflop poker. Get it
               right and you win big pots with your premiums and steal others outright with the perfect
               blocker bluff. Get it wrong and you either spew with hands that cannot fold anyone out, or
               you call off a tight 4-bettor with a hand that is drawing thin.

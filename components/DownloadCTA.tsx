@@ -42,7 +42,7 @@ export default function DownloadCTA() {
               Download on Google Play
             </motion.a>
             <motion.a
-              href="https://apps.apple.com/us/app/poker-reflex/id6761329446"
+              href="https://apps.apple.com/app/id6761329446"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Download on App Store"

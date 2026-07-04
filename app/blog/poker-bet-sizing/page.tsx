@@ -93,7 +93,7 @@ const faqSchema = {
 
 const PLAY_STORE_URL =
   'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex'
-const APP_STORE_URL = 'https://apps.apple.com/us/app/poker-reflex/id6761329446'
+const APP_STORE_URL = 'https://apps.apple.com/app/id6761329446'
 
 function CTABox({
   headline,
@@ -679,7 +679,7 @@ export default function BetSizingArticle() {
               Putting It All Together
             </h2>
             <p>
-              Bet sizing is one of the highest-leverage skills in poker because every single hand
+              Bet sizing is one of the highest-impact skills in poker because every single hand
               involves at least one bet. Know the basic sizes for each spot, stay consistent
               within ranges, and adjust to your opponent. The preflop sizes are relatively fixed
               (2.5-3x opens, 3-4x 3-bets). Postflop is where you get creative, but even there,

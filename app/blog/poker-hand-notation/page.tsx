@@ -271,8 +271,8 @@ export default function HandNotationArticle() {
               We will cover why hands get written this way, the <S>s</S> and <S>o</S> suffixes, the plus
               sign, the dashes, and the 13x13 grid that ties everything together. By the end you will read
               a line like &ldquo;22+, ATs+, KQs, AJo+&rdquo; at a glance and know exactly which hands it
-              means. Notation is the alphabet of poker strategy. It is quick to learn, and it unlocks
-              everything else.
+              means. Notation is the alphabet of poker strategy. It is quick to learn, and once you have it, every chart and guide just
+              makes sense.
             </p>
 
             {/* Why */}
