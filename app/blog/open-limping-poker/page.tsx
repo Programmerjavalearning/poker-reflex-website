@@ -741,7 +741,7 @@ export default function OpenLimpingArticle() {
               Say two players limp in front of you and you&apos;re on the button with 76s or 55. Calling along
               gets you a cheap, multiway flop in position with a hand that wants exactly that, lots of opponents
               to pay you off when you flop a straight, a flush, or a set. This is real <S>implied odds</S> and{' '}
-              <S>set mining</S> territory. <S>Suited connectors</S> and <S>small pocket pairs</S> realize their
+              <S>set mining</S> territory, and our <GL href="/blog/set-mining-poker">set mining guide</GL> has the exact odds and rules. <S>Suited connectors</S> and <S>small pocket pairs</S> realize their
               equity best when they can hit big and get paid, which a multiway limped pot supplies. The
               set-mining rule of thumb: you want your effective stack to be roughly 15 to 20 times the amount
               you have to call. So if you&apos;re calling 1bb to set-mine a small pair, you want about 15 to

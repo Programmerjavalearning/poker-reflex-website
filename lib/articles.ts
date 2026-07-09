@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'set-mining-poker',
+    title: 'Set Mining in Poker: Odds, Rules and When to Call',
+    excerpt:
+      'You only flop a set 11.8% of the time. The implied-odds rule that tells you when to call, the math with real chips, and when set mining stops working.',
+    category: 'Preflop',
+    readTime: '10 min read',
+    date: '2026-07-09',
+  },
+  {
     slug: 'isolate-limpers',
     title: 'How to Isolate Limpers in Poker (Sizing and Ranges)',
     excerpt:

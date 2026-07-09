@@ -7,15 +7,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date('2026-07-04'),
+      lastModified: new Date('2026-07-09'),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-07-04'),
+      lastModified: new Date('2026-07-09'),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/set-mining-poker`,
+      lastModified: new Date('2026-07-09'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/poker-bankroll-management`,
