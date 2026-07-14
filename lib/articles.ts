@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'suited-vs-offsuit',
+    title: 'Suited vs Offsuit Poker: How Much Does It Matter?',
+    excerpt:
+      'Being suited adds only about 3% equity, not the huge edge beginners think. The real numbers, when it flips a preflop decision, and when suited is still a fold.',
+    category: 'Fundamentals',
+    readTime: '9 min read',
+    date: '2026-07-14',
+  },
+  {
     slug: 'set-mining-poker',
     title: 'Set Mining in Poker: Odds, Rules and When to Call',
     excerpt:

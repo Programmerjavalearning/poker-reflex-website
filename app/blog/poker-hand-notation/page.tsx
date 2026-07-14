@@ -326,9 +326,10 @@ export default function HandNotationArticle() {
             </ul>
             <p className="mt-4">
               That is why offsuit hands show up three times as often as their suited twins, and it is why
-              charts treat them differently. A suited hand can make flushes, so it is worth more. You will
-              constantly see ranges that include AKs but not AKo, or that 3-bet AJs while only calling with
-              AJo. The suffix is doing real work.
+              charts treat them differently. A suited hand can make flushes, so it is worth more, though{' '}
+              <A href="/blog/suited-vs-offsuit">how much more</A> is smaller than most players think. You
+              will constantly see ranges that include AKs but not AKo, or that 3-bet AJs while only calling
+              with AJo. The suffix is doing real work.
             </p>
             <p className="mt-4">
               One more rule and it is a common trip-up: <S>pocket pairs never get a suffix</S>. A pair like
