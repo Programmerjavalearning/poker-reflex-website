@@ -225,7 +225,7 @@ export default function FourBetArticle() {
               <li>The <S>open</S> is the 2-bet (the first voluntary raise).</li>
               <li>The <S>3-bet</S> is the first reraise (a raise over the open).</li>
               <li>The <S>4-bet</S> is the reraise of the 3-bet (a raise over the reraise).</li>
-              <li>The <S>5-bet</S> is the next raise on top, and at 100bb it is almost always all-in.</li>
+              <li>The <A href="/blog/poker-5-bet">5-bet</A> is the next raise on top, and at 100bb it is almost always all-in.</li>
             </ul>
             <p className="mt-4">
               Here is what it looks like at a $1/$2 table. A player in the cutoff opens to $6. The

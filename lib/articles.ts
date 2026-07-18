@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'poker-5-bet',
+    title: 'What Is a 5-Bet in Poker? Sizing, Ranges & When to Jam',
+    excerpt:
+      'The reraise of a 4-bet, and at 100bb almost always all-in. The 1-bet to 5-bet ladder, 5-bet sizing, value and bluff ranges, and when to fold.',
+    category: 'Preflop',
+    readTime: '10 min read',
+    date: '2026-07-18',
+  },
+  {
     slug: 'suited-vs-offsuit',
     title: 'Suited vs Offsuit Poker: How Much Does It Matter?',
     excerpt:
