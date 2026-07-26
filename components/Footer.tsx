@@ -54,25 +54,22 @@ export default function Footer() {
         <div>
           <h4 className="font-heading font-semibold text-text mb-4">Quick Links</h4>
           <ul className="space-y-2">
+            {/* Root-relative fragments: these three ids live only in homepage-only
+                components, so bare "#features" style links were dead on all 28 other
+                routes. globals.css already sets scroll-behavior: smooth, so the
+                browser handles the scroll natively without a JS handler. */}
             <li>
-              <a href="#features" className="text-textSecondary hover:text-text text-sm transition-colors">
+              <a href="/#features" className="text-textSecondary hover:text-text text-sm transition-colors">
                 Features
               </a>
             </li>
             <li>
-              <a href="#faq" className="text-textSecondary hover:text-text text-sm transition-colors">
+              <a href="/#faq" className="text-textSecondary hover:text-text text-sm transition-colors">
                 FAQ
               </a>
             </li>
             <li>
-              <a
-                href="#download"
-                className="text-textSecondary hover:text-text text-sm transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('download')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }}
-              >
+              <a href="/#download" className="text-textSecondary hover:text-text text-sm transition-colors">
                 Download
               </a>
             </li>

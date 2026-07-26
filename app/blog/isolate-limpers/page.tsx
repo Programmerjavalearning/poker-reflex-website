@@ -77,6 +77,14 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
+      name: 'What is a limp raise in poker?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A limp raise (or limp-reraise) is when a player limps in first, waits for someone behind them to raise, and then reraises. It is the opposite of an isolation raise: with an iso-raise you raise over someone else’s limp, while a limp-raise is a trap set by the limper before you ever acted. At low stakes it is almost always a monster, usually AA or KK, so fold your isolation bluffs and continue only with QQ+ and AK.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Should you isolate a calling station?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -447,7 +455,46 @@ export default function IsolateLimpersArticle() {
               have Q&#9827;Q&#9827; in the cutoff. Raise, but understand why: you are not isolating to make
               him fold, you are building a big pot with a big hand against a player who cannot let go. Size
               up, value bet the flop, and get paid. Against a station, the iso-raise stops being a bluff
-              and becomes a value machine.
+              and becomes a value machine. He is{' '}
+              <A href="/blog/poker-elasticity">inelastic</A>: his calling range barely shrinks when you
+              size up, so a bigger raise collects more from the same hands.
+            </p>
+
+            {/* Limp-raise */}
+            <H2>When the Limper Raises You Back: The Limp-Raise</H2>
+            <p>
+              Sooner or later you iso a limper and they come back over the top. That move has its own
+              name, and it is worth knowing because people mix it up with the isolation raise
+              constantly. A <S>limp-raise</S> (sometimes written limp-reraise) is when a player limps
+              first, waits for someone behind to raise, and then reraises. It is the mirror image of
+              what you have been doing all article: you raise <em>over</em> a limp, they raise{' '}
+              <em>after</em> limping.
+            </p>
+            <p className="mt-4">
+              The confusion is understandable, since both moves involve a limp and a raise. The
+              difference is who acts first. An iso-raise is your opening raise into a passive field.
+              A limp-raise is a trap that was set before you ever acted.
+            </p>
+            <p className="mt-4">
+              Here is the part that matters at the table:{' '}
+              <S>in low-stakes live games, a limp-raise is almost always a monster.</S> Players who
+              limp-raise at $1/$2 are doing it with AA and KK, occasionally QQ or AK, and almost
+              nothing else. They limped hoping someone would raise so they could spring the trap. It
+              is a transparent play, and the correct response is to believe it.
+            </p>
+            <ul className="mt-4 space-y-2 pl-6 list-disc">
+              <li><S>Fold your isolation bluffs immediately.</S> All those suited connectors and weak suited aces you raised with are drawing nearly dead against the range that limp-raises. There is no shame here, they did their job the other 95% of the time.</li>
+              <li><S>Continue only with hands that beat the trap range.</S> That means QQ+ and AK, and even AK is thin against a player who only ever does this with aces and kings.</li>
+              <li><S>Set-mine only if the money is deep enough.</S> Small pairs can call if you are deep and the implied odds are there. Our <A href="/blog/set-mining-poker">set mining guide</A> has the exact rule for how much you need behind.</li>
+              <li><S>Adjust after you see it once.</S> A player who limp-raises is telling you their limping range is not uniformly weak. Tighten your isolation range against that specific opponent, or size up so the trap costs them more.</li>
+            </ul>
+            <p className="mt-4">
+              Should you limp-raise yourself? Almost never. It only works against opponents who raise
+              limps aggressively, it turns your strongest hands face up when it does not get through,
+              and it forfeits the pot outright whenever the table checks through behind you. You are
+              also limping, which is the leak our{' '}
+              <A href="/blog/open-limping-poker">open limping guide</A> takes apart in detail.
+              Raising your monsters is simpler and makes more money.
             </p>
 
             {/* When not to */}
@@ -509,6 +556,14 @@ export default function IsolateLimpersArticle() {
               Wider than you would open, because the limper range is weak. Late position, isolate a huge
               range. Early position, tighten to hands that flop well: pairs, suited aces, broadways, and
               suited connectors.
+            </p>
+            <p className="mt-4">
+              <S>What is a limp raise in poker?</S>{' '}
+              A limp raise (or limp-reraise) is when a player limps in first, waits for someone behind
+              them to raise, and then reraises. It is the opposite of an isolation raise: with an
+              iso-raise you raise over someone else&rsquo;s limp, while a limp-raise is a trap set by
+              the limper before you ever acted. At low stakes it is almost always a monster, usually
+              AA or KK, so fold your isolation bluffs and continue only with QQ+ and AK.
             </p>
             <p className="mt-4">
               <S>Should you isolate a calling station?</S>{' '}

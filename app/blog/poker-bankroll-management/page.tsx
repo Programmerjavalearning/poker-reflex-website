@@ -482,6 +482,41 @@ export default function BankrollManagementArticle() {
               text="Master open, 3-bet, 4-bet, and all-in decisions with a simple swipe-based trainer. Free to download."
             />
 
+            {/* H2: FAQ. These four questions and answers mirror faqSchema verbatim.
+                Google requires FAQ structured data to be visible on the page. */}
+            <h2
+              className="font-heading font-bold text-2xl md:text-3xl mt-12 mb-5 pl-4"
+              style={{
+                color: 'var(--text)',
+                borderLeft: '3px solid var(--green)',
+              }}
+            >
+              Common Questions About Bankroll Management
+            </h2>
+            <p>
+              <strong style={{ color: 'var(--text)' }}>What is a poker bankroll?</strong>{' '}
+              A poker bankroll is money set aside specifically for playing poker, completely separate
+              from your living expenses. It should never include rent, bills, or any funds you need
+              for daily life.
+            </p>
+            <p className="mt-4">
+              <strong style={{ color: 'var(--text)' }}>How many buy-ins do you need for cash games?</strong>{' '}
+              The standard guideline is 20 to 30 buy-ins for the stake you play. More conservative
+              players keep 40 to 50 buy-ins, especially in tougher games or when playing a
+              higher-variance style.
+            </p>
+            <p className="mt-4">
+              <strong style={{ color: 'var(--text)' }}>How many buy-ins do you need for poker tournaments?</strong>{' '}
+              Tournament players should have at least 100 buy-ins due to higher variance. For
+              large-field MTTs, rebuys, or satellites, 150 to 200 buy-ins is recommended.
+            </p>
+            <p className="mt-4">
+              <strong style={{ color: 'var(--text)' }}>When should you move up in poker stakes?</strong>{' '}
+              Move up when you have both the bankroll for the next level and a proven win rate at
+              your current stake. If your bankroll drops below 20 buy-ins for your current level,
+              move down immediately.
+            </p>
+
             {/* H2: Final Thoughts */}
             <h2
               className="font-heading font-bold text-2xl md:text-3xl mt-12 mb-5 pl-4"

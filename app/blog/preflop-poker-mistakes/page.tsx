@@ -884,7 +884,9 @@ export default function PreflopMistakesArticle() {
             <P>
               The pattern is simple. Against players who fold too much, bluff more. Against players who
               never fold, bluff less and value bet bigger. The baseline is your home, and reading type is
-              how you step away from it on purpose.
+              how you step away from it on purpose. The mechanism behind that second half is{' '}
+              <GL href="/blog/poker-elasticity">elasticity</GL>, and it has one important catch: sizing up
+              only works with the hands that beat the strong part of what calls you.
             </P>
 
             <H2>How to Find Your Own Biggest Leaks</H2>

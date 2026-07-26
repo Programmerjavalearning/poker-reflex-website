@@ -372,7 +372,16 @@ export default function BetSizingArticle() {
               <strong style={{ color: 'var(--text)' }}>big as you think a worse hand will
               pay</strong>. If your opponent is loose and pays off, bet 75-100% of the pot. If
               they're tight, drop to 50-60% so they can talk themselves into a call with weaker
-              hands. Reading your opponent matters more than any chart here.
+              hands. Reading your opponent matters more than any chart here, and the idea that turns
+              that read into an actual number is{' '}
+              <Link
+                href="/blog/poker-elasticity"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                elasticity
+              </Link>
+              : how much their calling range really moves when the price goes up.
             </p>
             <p className="mt-4">
               Example: you have top two pair on the river, the pot is $80, and your opponent has

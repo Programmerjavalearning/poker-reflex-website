@@ -18,6 +18,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/poker-elasticity`,
+      lastModified: new Date('2026-07-26'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/poker-range-percentages`,
       lastModified: new Date('2026-07-26'),
       changeFrequency: 'monthly',

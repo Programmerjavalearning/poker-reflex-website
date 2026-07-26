@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     siteName: 'Poker Reflex',
     type: 'article',
     locale: 'en_US',
+    images: [BRAND_ASSETS.squareLogoUrl],
   },
   twitter: {
     card: 'summary_large_image',

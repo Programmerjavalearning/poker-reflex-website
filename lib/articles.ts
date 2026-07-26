@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'poker-elasticity',
+    title: "Poker Elasticity: Why One Bet Size Doesn't Fit Both Opponents",
+    excerpt:
+      'Your bet is worth call frequency times size, so you maximise the product, not the size. Why "bet bigger against stations" loses money on half your range.',
+    category: 'Fundamentals',
+    readTime: '11 min read',
+    date: '2026-07-26',
+  },
+  {
     slug: 'poker-range-percentages',
     title: 'Poker Range Percentages: What a 10%, 20% or 30% Range Actually Looks Like',
     excerpt:

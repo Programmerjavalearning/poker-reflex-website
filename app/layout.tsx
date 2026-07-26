@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
-import Script from 'next/script'
 import { BRAND_ASSETS, SITE_URL } from '@/lib/brand'
 
 const inter = Inter({
@@ -65,30 +64,41 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        {/* JSON-LD structured data */}
-        <Script id="schema-app" type="application/ld+json" strategy="afterInteractive">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'MobileApplication',
-            name: 'Poker Reflex',
-            description: 'Train open, 3-bet, 4-bet, and all-in preflop decisions with a swipe-based GTO poker trainer.',
-            operatingSystem: 'ANDROID, IOS',
-            applicationCategory: 'GameApplication',
-            offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-            aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', ratingCount: '80' },
-            url: SITE_URL,
-            installUrl: 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex',
-          })}
-        </Script>
-        <Script id="schema-organization" type="application/ld+json" strategy="afterInteractive">
-          {JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Organization',
-            name: 'Poker Reflex',
-            url: SITE_URL,
-            logo: BRAND_ASSETS.squareLogoUrl,
-          })}
-        </Script>
+        {/* JSON-LD structured data. Inlined on purpose: next/script with
+            strategy="afterInteractive" renders nothing server-side and injects the
+            tag from a useEffect, so crawlers that do not execute JS saw no
+            Organization or MobileApplication markup at all. Every per-page schema
+            in this repo already uses this inline form. */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'MobileApplication',
+              name: 'Poker Reflex',
+              description: 'Train open, 3-bet, 4-bet, and all-in preflop decisions with a swipe-based GTO poker trainer.',
+              operatingSystem: 'ANDROID, IOS',
+              applicationCategory: 'GameApplication',
+              offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+              aggregateRating: { '@type': 'AggregateRating', ratingValue: '5.0', ratingCount: '80' },
+              url: SITE_URL,
+              installUrl: 'https://play.google.com/store/apps/details?id=com.alexischup.pokerreflex',
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Poker Reflex',
+              url: SITE_URL,
+              logo: BRAND_ASSETS.squareLogoUrl,
+            }),
+          }}
+        />
+
 
         {children}
       </body>
