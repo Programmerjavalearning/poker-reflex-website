@@ -7,15 +7,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: baseUrl,
-      lastModified: new Date('2026-07-18'),
+      lastModified: new Date('2026-07-26'),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date('2026-07-18'),
+      lastModified: new Date('2026-07-26'),
       changeFrequency: 'weekly',
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog/poker-range-percentages`,
+      lastModified: new Date('2026-07-26'),
+      changeFrequency: 'monthly',
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/poker-5-bet`,
@@ -63,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/blog/gto-poker-for-beginners`,
       lastModified: new Date('2026-05-29'),
       changeFrequency: 'monthly',
-      priority: 0.8,
+      priority: 0.7,
     },
     {
       url: `${baseUrl}/blog/poker-bet-sizing`,

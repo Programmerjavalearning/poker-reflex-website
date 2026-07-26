@@ -230,7 +230,16 @@ export default function PokerStartingHandsArticle() {
               >
                 full guide to poker hand notation
               </Link>{' '}
-              decodes AKs, AKo, 22+, ATs+ and the whole 13x13 grid.
+              decodes AKs, AKo, 22+, ATs+ and the whole 13x13 grid. And when a chart describes a range as a
+              percentage instead of a list, our{' '}
+              <Link
+                href="/blog/poker-range-percentages"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                guide to range percentages
+              </Link>{' '}
+              shows what 10%, 20% and 30% actually look like on that grid.
             </p>
 
             {/* H2: Premium Hands */}

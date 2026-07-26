@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'poker-range-percentages',
+    title: 'Poker Range Percentages: What a 10%, 20% or 30% Range Actually Looks Like',
+    excerpt:
+      'A range percentage counts combinations, not boxes on the grid. Six grids showing exactly what 5%, 10%, 15%, 20%, 30% and 40% look like, with the combo math.',
+    category: 'Fundamentals',
+    readTime: '11 min read',
+    date: '2026-07-26',
+  },
+  {
     slug: 'poker-5-bet',
     title: 'What Is a 5-Bet in Poker? Sizing, Ranges & When to Jam',
     excerpt:

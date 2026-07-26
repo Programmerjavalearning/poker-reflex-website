@@ -586,6 +586,9 @@ export default function HandNotationArticle() {
               <A href="/tools/range-visualizer">range visualizer</A> and build a range by typing a line like
               &ldquo;22+, ATs+, KQs, AJo+,&rdquo; then watch it paint the grid. Read a{' '}
               <A href="/blog/poker-starting-hands">starting hands chart</A> now that the symbols make sense.
+              And the next time a chart quotes a range as a number rather than a list, like &ldquo;open 20%
+              from the cutoff,&rdquo; our <A href="/blog/poker-range-percentages">range percentages guide</A>{' '}
+              shows exactly which hands that is, grid by grid.
               And when you drill spots in the app, you will read the hands without even thinking about it.
               The notation was never the hard part. It was just the door.
             </p>

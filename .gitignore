@@ -4,14 +4,16 @@ node_modules/
 .pnp.js
 
 # Environment variables - CRITICAL
+# Catch-all patterns, NOT an enumerated list. A downloaded Vercel env file lands
+# as "env.local.download" (no leading dot), which an enumerated list misses and a
+# single "git add -A" would then publish to this public repo.
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env*.local
-.env.production
-.env.development
+.env.*
+*.env
+env.local*
+*env.local*
+*.env.local
+!.env.example
 
 # Next.js build output
 /.next/
