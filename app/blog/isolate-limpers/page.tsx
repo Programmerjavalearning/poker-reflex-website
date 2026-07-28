@@ -53,6 +53,14 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
+      name: 'What does iso mean in poker?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Iso is short for isolation raise, sometimes written iso-raise. It is a raise you make over one or more limpers with the goal of playing the pot heads-up against the limper, ideally in position. When someone says they are isolating, or that they made an iso, they mean exactly that raise.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'What does it mean to isolate a limper?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -540,6 +548,13 @@ export default function IsolateLimpersArticle() {
             {/* FAQ */}
             <H2>Common Questions About Isolating Limpers</H2>
             <p>
+              <S>What does iso mean in poker?</S>{' '}
+              Iso is short for isolation raise, sometimes written iso-raise. It is a raise you make over
+              one or more limpers with the goal of playing the pot heads-up against the limper, ideally
+              in position. When someone says they are isolating, or that they made an iso, they mean
+              exactly that raise.
+            </p>
+            <p className="mt-4">
               <S>What does it mean to isolate a limper?</S>{' '}
               It means raising over their limp so you play the pot heads-up and in position against a weak,
               capped range. Instead of calling along, you raise to fold out the field and get one on one

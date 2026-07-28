@@ -478,6 +478,48 @@ export default function PokerPositionsArticle() {
             </figure>
 
             {/* H2: How Position Changes Which Hands You Play */}
+            {/* H2: IP and OOP */}
+            <h2
+              className="font-heading font-bold text-2xl md:text-3xl mt-12 mb-5 pl-4"
+              style={{
+                color: 'var(--text)',
+                borderLeft: '3px solid var(--green)',
+              }}
+            >
+              In Position and Out of Position: What IP and OOP Mean
+            </h2>
+            <p>
+              Two abbreviations show up constantly in charts, forums and training videos, and they are
+              worth nailing down because everything above depends on them.{' '}
+              <strong style={{ color: 'var(--text)' }}>IP means in position</strong>: you act after your
+              opponent on every postflop street.{' '}
+              <strong style={{ color: 'var(--text)' }}>OOP means out of position</strong>: you act first.
+              That is the whole definition, and it decides more about how a hand plays than the cards do.
+            </p>
+            <p className="mt-4">
+              Here is the part that trips people up. Position is decided by who acts last{' '}
+              <strong style={{ color: 'var(--text)' }}>after the flop</strong>, and that is not the same
+              order as before it. The blinds act last preflop, which feels like an advantage, then act
+              first on every single street that follows. That flip is exactly why the blinds are the
+              hardest seats at the table despite getting to see the action before they decide.
+            </p>
+            <p className="mt-4">
+              Being OOP costs you in three ways at once. You give away information every time you check or
+              bet before your opponent has to commit. You cannot control the size of the pot, because
+              they always get the last word on the price. And your bluffs work less often, since a player
+              acting last can simply call and see what you do next. Being IP hands you all three back,
+              which is why the same hand is worth so much more from the button. It also changes how much
+              you should bet, and our{' '}
+              <Link
+                href="/blog/poker-bet-sizing"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                bet sizing guide
+              </Link>{' '}
+              covers why OOP bets tend to be larger.
+            </p>
+
             <h2
               className="font-heading font-bold text-2xl md:text-3xl mt-12 mb-5 pl-4"
               style={{

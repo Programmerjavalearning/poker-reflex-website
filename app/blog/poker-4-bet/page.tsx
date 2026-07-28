@@ -212,7 +212,8 @@ export default function FourBetArticle() {
               A 4-bet is the second reraise before the flop, the raise that comes right after a 3-bet.
               Just like with the 3-bet, the name confuses people because it sounds like it should be
               the fourth raise. It isn&apos;t. We count bets, not raises, and the count starts with the
-              blinds.
+              blinds. You will see it written both ways, <S>4-bet</S> and <S>4bet</S>, and they mean the
+              same thing.
             </p>
             <p className="mt-4">
               Notice the order of events that has to happen first. A 4-bet can only exist after someone

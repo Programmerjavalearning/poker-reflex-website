@@ -274,6 +274,12 @@ export default function HandNotationArticle() {
               means. Notation is the alphabet of poker strategy. It is quick to learn, and once you have it, every chart and guide just
               makes sense.
             </p>
+            <p className="mt-4">
+              One note on naming before we start. You will see this shorthand called{' '}
+              <S>poker notation</S>, poker hand notation, or range notation, and they all mean the same
+              system. Poker notation is just the written form of a hand or a group of hands, and every
+              chart, solver and training app uses it.
+            </p>
 
             {/* Why */}
             <H2>Why Poker Hands Get Written as AKs, AKo, and 22+</H2>
