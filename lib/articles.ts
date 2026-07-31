@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'ak-vs-22-preflop-odds',
+    title: "AK vs 22 Preflop: The Real Odds (and Why It Isn't a Coin Flip)",
+    excerpt:
+      'The deuces are a 53/47 favourite against AK offsuit, and not favourites at all against AK suited. Exact numbers, enumerated over every board, plus what it means for getting it in.',
+    category: 'Preflop',
+    readTime: '9 min read',
+    date: '2026-07-31',
+  },
+  {
     slug: 'poker-elasticity',
     title: "Poker Elasticity: Why One Bet Size Doesn't Fit Both Opponents",
     excerpt:

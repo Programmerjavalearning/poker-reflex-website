@@ -118,7 +118,7 @@ const faqSchema = {
       name: 'Is a coinflip in poker really 50/50?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Not exactly. A pair against two overcards, like 88 versus AKo, runs about 52.6 to 47.4 in the pair favor, so roughly 53/47, not a true 50/50. People call it a coinflip because it is close, but the small edge matters over many hands. Suitedness and connectedness shift it a point or two.',
+        text: 'Not exactly. A pair against two overcards, like 22 versus AKo, runs about 52.6 to 47.4 in the pair favor, so roughly 53/47, not a true 50/50. People call it a coinflip because it is close, but the small edge matters over many hands. The bigger the pair, the wider the split: 88 versus AKo is already about 55.6 to 44.4.',
       },
     },
     {
@@ -158,7 +158,7 @@ const potOddsRows: string[][] = [
 ]
 
 const matchupRows: string[][] = [
-  ['Pair vs two overcards (the race)', '88 vs AKo', '~53/47', 'The pair is a small favorite. People call it a coinflip because it is close.'],
+  ['Pair vs two overcards (the race)', '22 vs AKo', '~53/47', 'The pair is a small favorite. People call it a coinflip because it is close.'],
   ['Pair vs one overcard (dominated)', '99 vs A8o', '~70/30', 'The pair is a big favorite. The lone overcard rarely saves the ace.'],
   ['Dominated ace', 'AKo vs AQo', '~73/27', 'Sharing the ace crushes the weaker kicker. Only a queen or running luck helps.'],
   ['Two higher cards vs two lower', 'AJo vs T9o', '~58/42', 'The bigger cards lead, but the connected lower hand has real life.'],
@@ -655,12 +655,14 @@ export default function PokerEquityArticle() {
             </figure>
             <H3>The classic coinflip and why it is not 50/50</H3>
             <P>
-              The race everyone calls a coinflip, a pair against two overcards like 88 against AKo, is not
+              The race everyone calls a coinflip, a pair against two overcards like 22 against AKo, is not
               actually even. It runs about 52.6 to 47.4 in the pair&apos;s favor, so roughly 53/47. People
               round it to 50/50 because it&apos;s close, but that small edge adds up over hundreds of
-              all-ins. The split only stretches toward 55/45 when the overcards are lower, unsuited, and
-              unconnected. The AK version specifically stays close to a flip, which is the whole point of
-              calling it one. Misreading these races is one of the classic{' '}
+              all-ins. What widens the split is the size of the pair, not the overcards: 88 against that
+              same AKo is already about 55.6 to 44.4. And against a suited AK the smallest pairs are not
+              favorites at all, since 22 versus AKs is essentially dead even. We break that specific
+              matchup down board by board in our{' '}
+              <GL href="/blog/ak-vs-22-preflop-odds">AK vs 22 odds guide</GL>. Misreading these races is one of the classic{' '}
               <GL href="/blog/preflop-poker-mistakes">preflop poker mistakes</GL> that quietly drains a
               stack.
             </P>
@@ -847,10 +849,10 @@ export default function PokerEquityArticle() {
 
             <H3>Is a coinflip in poker really 50/50?</H3>
             <P>
-              Not exactly. A pair against two overcards, like 88 versus AKo, runs about 52.6 to 47.4 in the
+              Not exactly. A pair against two overcards, like 22 versus AKo, runs about 52.6 to 47.4 in the
               pair&apos;s favor, so roughly 53/47, not a true 50/50. People call it a coinflip because
-              it&apos;s close, but the small edge matters over many hands. Suitedness and connectedness
-              shift it a point or two.
+              it&apos;s close, but the small edge matters over many hands. The bigger the pair, the wider
+              the split: 88 versus AKo is already about 55.6 to 44.4.
             </P>
 
             <H3>What is equity realization?</H3>
