@@ -11,6 +11,15 @@ export const categories = ['All', 'Preflop', 'Fundamentals'] as const
 
 export const articles: Article[] = [
   {
+    slug: 'is-my-ace-dominated',
+    title: 'Is My Ace Dominated? The Real Odds by Kicker and Table Size',
+    excerpt:
+      'Someone holds an ace 69.5% of the time at a full table, but a better ace only 30.3% of the time with A9. A full chart, every kicker, every table size.',
+    category: 'Preflop',
+    readTime: '10 min read',
+    date: '2026-08-06',
+  },
+  {
     slug: 'ak-vs-22-preflop-odds',
     title: "AK vs 22 Preflop: The Real Odds (and Why It Isn't a Coin Flip)",
     excerpt:

@@ -160,7 +160,7 @@ const potOddsRows: string[][] = [
 const matchupRows: string[][] = [
   ['Pair vs two overcards (the race)', '22 vs AKo', '~53/47', 'The pair is a small favorite. People call it a coinflip because it is close.'],
   ['Pair vs one overcard (dominated)', '99 vs A8o', '~70/30', 'The pair is a big favorite. The lone overcard rarely saves the ace.'],
-  ['Dominated ace', 'AKo vs AQo', '~73/27', 'Sharing the ace crushes the weaker kicker. Only a queen or running luck helps.'],
+  ['Dominated ace', 'AKo vs AQo', '~74/26', 'Sharing the ace crushes the weaker kicker. Only a queen or running luck helps.'],
   ['Two higher cards vs two lower', 'AJo vs T9o', '~58/42', 'The bigger cards lead, but the connected lower hand has real life.'],
   ['Pair over pair', 'QQ vs 88', '~80/20', 'The bigger pair dominates. The underdog needs to hit a set.'],
 ]

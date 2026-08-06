@@ -322,7 +322,16 @@ export default function PokerStartingHandsArticle() {
               flop top pair with A8, your opponent holds AK. They bet, you call, you lose a big pot.
               This is called being <strong style={{ color: 'var(--text)' }}>dominated</strong>, and it's one of the most expensive situations in
               poker. The ace in your hand is the same ace in theirs, but their kicker beats yours
-              on every board.
+              on every board. How often it actually happens depends on your kicker and on how many
+              players are behind you, and we put exact numbers on both in our{' '}
+              <Link
+                href="/blog/is-my-ace-dominated"
+                style={{ color: 'var(--green)' }}
+                className="hover:opacity-80 transition-opacity underline underline-offset-2"
+              >
+                guide to dominated ace odds
+              </Link>
+              .
             </p>
             <p className="mt-4">
               Offsuit broadways like KJo, QTo, KTo are position-dependent. Raise them from the
